@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { ClientesService } from '../clientes.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  login: FormGroup;
+
+
+  constructor(private clientesService: ClientesService) {
+    this.login = new FormGroup({
+      nombre: new FormControl(''),
+      apellidos: new FormControl(''),
+      fechadenacimiento: new FormControl(''),
+      password: new FormControl(''),
+      repitpassword: new FormControl(''),
+      codigopostal: new FormControl(''),
+      direccion: new FormControl(''),
+      telefono: new FormControl(''),
+      localidad: new FormControl(''),
+      provincia: new FormControl('')
+    });
+  }
 
   ngOnInit() {
   }
