@@ -1,0 +1,12 @@
+nav{
+    font-size: 25px;
+}
+
+nav .navbar-brand {
+    font-size: 30px;
+}
+.container-fluid{
+    background-image: url(../imagenes/cabecera3.jpg);
+
+    height: 400px;
+}
