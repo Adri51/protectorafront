@@ -10,3 +10,10 @@ nav .navbar-brand {
 
     height: 400px;
 }
+.footer{
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
