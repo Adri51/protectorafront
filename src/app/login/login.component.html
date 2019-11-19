@@ -1,5 +1,5 @@
 <div class="container">
-    <form [formGroup]="login" (ngSubmit)="onSubmit()">
+    <form [formGroup]="login" (ngSubmit)="onSubmit()" novalidate>
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label>Nombre</label>
@@ -51,6 +51,6 @@
             </div>
         </div>
 
-        <input type="submit" value="Enviar" class="btn btn-outline-info btn-block">
+        <input type="submit" value="Enviar" class="btn btn-outline-info btn-block" [disabled]="login.invalid">
     </form>
 </div>

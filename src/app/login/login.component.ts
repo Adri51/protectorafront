@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ClientesService } from '../clientes.service';
 
 @Component({
@@ -14,20 +14,44 @@ export class LoginComponent implements OnInit {
 
   constructor(private clientesService: ClientesService) {
     this.login = new FormGroup({
-      nombre: new FormControl(''),
-      apellidos: new FormControl(''),
-      fechadenacimiento: new FormControl(''),
-      password: new FormControl(''),
-      repitpassword: new FormControl(''),
-      codigopostal: new FormControl(''),
-      direccion: new FormControl(''),
-      telefono: new FormControl(''),
-      localidad: new FormControl(''),
-      provincia: new FormControl('')
+      nombre: new FormControl('', [
+        Validators.required
+      ]),
+      apellidos: new FormControl('', [
+        Validators.required
+      ]),
+      fechadenacimiento: new FormControl('', [
+        Validators.required
+      ]),
+      password: new FormControl('', [
+        Validators.required
+      ]),
+      repitpassword: new FormControl('', [
+        Validators.required
+      ]),
+      codigopostal: new FormControl('', [
+        Validators.required
+      ]),
+      direccion: new FormControl('', [
+        Validators.required
+      ]),
+      telefono: new FormControl('', [
+        Validators.required
+      ]),
+      localidad: new FormControl('', [
+        Validators.required
+      ]),
+      provincia: new FormControl('', [
+        Validators.required
+      ])
     });
   }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    console.log(this.login.value);
   }
 
 }
