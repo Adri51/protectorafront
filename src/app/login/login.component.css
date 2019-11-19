@@ -10,3 +10,7 @@ input.ng-invalid{
     color: red;
     font-size: 14px;
 }
+#btn {
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
