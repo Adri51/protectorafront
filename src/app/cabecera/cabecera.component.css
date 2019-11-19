@@ -7,6 +7,7 @@ nav .navbar-brand {
 }
 .container-fluid{
     background-image: url(../imagenes/cabecera3.jpg);
+    background-size: auto;
 
     height: 400px;
 }
