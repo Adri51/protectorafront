@@ -1,5 +1,7 @@
 nav{
-    font-size: 25px;
+    font-size: 20px;
+    height: 70px;
+    
 }
 
 nav .navbar-brand {
@@ -20,4 +22,16 @@ nav .navbar-brand {
 
 nav i{
     margin-right: 10px;
+}
+
+div ul li{
+    padding: 20px;
+    
+}
+
+div ul li a{
+    cursor: pointer;
+}
+#titulo{
+    margin-right: 450px;
 }

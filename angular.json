@@ -25,10 +25,20 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+<<<<<<< HEAD
               "node_modules/font-awesome/css/font-awesome.min.css",
+=======
+<<<<<<< HEAD
+              "node_modules/font-awesome/css/font-awesome.min.css",
+=======
+              "node_modules/@fortawesome/fontawesome-free/js/all.css",
+>>>>>>> 3e28ab44e039219a0a8c60b1465699f95b49b4df
+>>>>>>> b24c0e300a723e339ea98ac19fcdaa03e89ef73a
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
