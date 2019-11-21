@@ -2,36 +2,62 @@
     <div class="text-center">
         <img src="../../assets/titulo1.png">
     </div>
-    <h1 class="text-center">QUIENES SOMOS</h1>
+    <h1 class="text-center">¿QUIENES SOMOS?</h1>
     <article>
         <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias accusantium esse culpa iure laboriosam
-            ipsa, eligendi quas vel illum, a, ea veniam ratione sed quo magnam natus cupiditate laborum nesciunt?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui provident nobis porro debitis omnis repellat
-            ea culpa sed illum dolores molestiae numquam ab eum voluptas unde, enim voluptates ipsam veritatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eos eaque eveniet voluptatem modi saepe
-            maxime totam molestiae. Nam temporibus incidunt dignissimos minus voluptate odio ipsa animi ex praesentium
-            aspernatur!
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores minus possimus architecto at cum fugit aut
-            placeat incidunt, eos sapiente voluptates? Illum, quo commodi voluptatem ut praesentium quos voluptatum!
-            Rerum!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga architecto voluptatum laborum odio tenetur
-            quos quisquam reiciendis impedit ad, ex itaque. Amet expedita omnis et commodi voluptatibus voluptate
-            assumenda?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, magni rerum blanditiis, unde iste pariatur
-            saepe provident laborum, odio dolores natus! Saepe dolore cupiditate officia distinctio animi, corrupti
-            itaque asperiores.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam qui possimus ipsum id aperiam, voluptas
-            impedit quisquam, sunt aliquid laboriosam minus quos est repellendus accusantium eius facere repellat.
-            Asperiores, perferendis.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus commodi necessitatibus perferendis
-            quas culpa dignissimos facere, aliquam expedita veniam magnam alias? Deserunt asperiores nulla dolor dolorum
-            reprehenderit ut corporis amet.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet non laboriosam esse? At dolores, officiis
-            voluptates quo sit reiciendis quidem, ea exercitationem facilis sunt maiores dicta sed? Nihil, sint sed!
+            Somos Sergio y Adrián, dos personas totalmente independientes a los nos une la misma pasión, el mundo de la
+            tecnología y programación, commpaginado con los animales.
+
+            Adoptadog.es es el proyecto que llevamos varios años en la mente con los objetivos muy claros: por un lado,
+            ayudar a esas personas indecisas que necesitan buscar un animal de compañía de la forma mas rápida posible;
+            otro lado, a las protectoras, que a dia de hoy están cada vez más llenas de animales desprotegidos,
+            abandonados o maltratados. Y por último, por supuesto a que los perros encuentren una familia cuanto
+            antes.
         </p>
     </article>
+    <div class="container" id="contacto">
+        <h2 class="text-center">CONTACTA CON NOSOTROS</h2>
+        <form [formGroup]="contacto" (ngSubmit)="onSubmit()">
+            <div _ngcontent class="form-group input-group">
+                <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                    <label _ngcontent-c5>Nombre</label>
+                </div>
+                <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                    <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
+                        formcontrolname="nombre" placeholder="Nombre" required="" type="text">
+                </div>
+            </div>
+            <div _ngcontent class="form-group input-group">
+                <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                    <label _ngcontent-c5>Apellidos</label>
+                </div>
+                <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                    <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
+                        formcontrolname="apellidos" placeholder="Apellidos" required="" type="text">
+                </div>
+            </div>
+            <div _ngcontent class="form-group input-group">
+                <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                    <label _ngcontent-c5>Email</label>
+                </div>
+                <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                    <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
+                        formcontrolname="email" placeholder="Email" required="" type="text">
+                </div>
+            </div>
+            <div _ngcontent class="form-group input-group">
+                <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                    <label _ngcontent-c5>Teléfono</label>
+                </div>
+                <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                    <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
+                        formcontrolname="telefono" placeholder="Teléfono" type="text">
+                </div>
+            </div>
+            <div id="btn" class="col-2-md-2">
+                <input type="submit" value="Buscar" class="btn btn-success btn-block">
+            </div>
+        </form>
+    </div>
 
 </div>

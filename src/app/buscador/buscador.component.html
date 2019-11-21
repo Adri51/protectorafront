@@ -1,28 +1,60 @@
 <div class="container" id="buscador">
-    <h2>Buscador</h2>
+    <h2 class="text-center"><i class="fa fa-search"></i> BUSCADOR</h2>
     <form [formGroup]="buscador" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label>Perrera</label>
-            <input type="text" class="form-control" formControlName="perrera">
+        <div _ngcontent class="form-group input-group">
+            <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                <label _ngcontent-c5>Perrera</label>
+            </div>
+            <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
+                    formcontrolname="perrera" placeholder="Perrera" required="" type="text">
+            </div>
+        </div>
+        <div _ngcontent class="form-group input-group">
+            <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                <label _ngcontent-c5>Raza</label>
+            </div>
+            <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="raza"
+                    placeholder="Raza" required="" type="text">
+            </div>
         </div>
 
-        <div class="form-group">
-            <label>Raza</label>
-            <input type="text" class="form-control" formControlName="raza">
+
+        <div _ngcontent class="form-group input-group">
+            <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                <label _ngcontent-c5>Color</label>
+            </div>
+            <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="color"
+                    placeholder="Color" required="" type="text">
+            </div>
         </div>
-        <div class="form-group">
-            <label>Color</label>
-            <input type="text" class="form-control" formControlName="color">
+
+
+        <div _ngcontent class="form-group input-group">
+            <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                <label _ngcontent-c5>Tamaño</label>
+            </div>
+            <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="size"
+                    placeholder="Tamaño" required="" type="text">
+            </div>
         </div>
-        <div class="form-group">
-            <label>Tamaño</label>
-            <input type="text" class="form-control" formControlName="tamaño">
+
+
+        <div _ngcontent class="form-group input-group">
+            <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                <label _ngcontent-c5>Edad</label>
+            </div>
+            <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="edad"
+                    placeholder="Edad" required="" type="text">
+            </div>
         </div>
-        <div class="form-group">
-            <label>Edad</label>
-            <input type="password" class="form-control" formControlName="edad">
+        <div class="col-12-md-6">
+            <input id="boton" type="submit" value="Buscar" class="btn btn-outline-info btn-block">
         </div>
-        <input id="boton" type="submit" value="Buscar" class="btn btn-outline-info btn-block">
     </form>
 </div>
 
