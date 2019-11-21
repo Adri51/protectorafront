@@ -25,14 +25,12 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-<<<<<<< HEAD
-              "node_modules/@fortawesome/fontawesome-free/js/all.css",
-=======
-              "node_modules/@fontawesome/fontawesome-free/js/all.css",
->>>>>>> rama
+              "node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
