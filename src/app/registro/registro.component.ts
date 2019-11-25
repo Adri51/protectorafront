@@ -20,6 +20,9 @@ export class RegistroComponent implements OnInit {
       apellidos: new FormControl('', [
         Validators.required
       ]),
+      email: new FormControl('', [
+        Validators.required
+      ]),
       fechadenacimiento: new FormControl('', [
         Validators.required
       ]),

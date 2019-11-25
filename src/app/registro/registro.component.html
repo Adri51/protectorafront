@@ -1,3 +1,5 @@
+<h2>Formulario de Registro</h2>
+
 <div class="container">
     <form [formGroup]="registro" (ngSubmit)="onSubmit()" novalidate>
         <div class="form-row">
@@ -10,9 +12,9 @@
                 <input type="text" class="form-control" formControlName="apellidos">
             </div>
             <div class="col-md-4 mb-3">
-                <label>Fecha de Nacimiento</label>
+                <label>Email</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" formControlName="fechadenacimiento">
+                    <input type="text" class="form-control" formControlName="email">
                 </div>
             </div>
         </div>
@@ -49,9 +51,15 @@
                 <label>Provincia</label>
                 <input type="text" class="form-control" formControlName="provincia">
             </div>
+            <div class="col-md-8 mb-3">
+                <label>Fecha de Nacimiento</label>
+
+                <input type="text" class="form-control" formControlName="fechadenacimiento">
+            </div>
         </div>
+
         <div id="btn">
-            <input type="submit" value="Enviar" class="btn btn-outline-info btn-block" [disabled]="registro.invalid">
+            <input type="submit" value="Enviar" class="btn btn-outline-success btn-block" [disabled]="registro.invalid">
         </div>
     </form>
 </div>
