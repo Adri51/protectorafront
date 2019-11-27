@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PerrosService } from '../perros.service';
 import { PerrerasService } from '../perreras.service';
 
+
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',
@@ -25,6 +26,7 @@ export class PrincipalComponent implements OnInit {
       edad: new FormControl('')
     });
   }
+
 
   ngOnInit() {
     this.perrerasService.getPerreras()
