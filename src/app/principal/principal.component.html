@@ -1,95 +1,140 @@
 <app-cabecera></app-cabecera>
 <img src="../../assets/cabecera.png" class="img-fluid" alt="Responsive image">
 
-<div class="container" id="buscador">
-    <h2 class="text-center mt-3"><i class="fa fa-search"></i> BUSCADOR</h2>
-    <form class="mt-3" [formGroup]="buscador" (ngSubmit)="onSubmit()">
-        <div _ngcontent class="form-group input-group">
-            <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
-                <label _ngcontent-c5>Perrera</label>
-            </div>
-            <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
-                <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                    formcontrolname="perrera" placeholder="Perrera" required="" type="text">
-            </div>
-        </div>
-        <div _ngcontent class="form-group input-group">
-            <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
-                <label _ngcontent-c5>Raza</label>
-            </div>
-            <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
-                <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="raza"
-                    placeholder="Raza" required="" type="text">
-            </div>
-        </div>
+<div class="container mt-5">
+    <article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quam pariatur accusantium aliquid, eaque et
+            illo voluptas nobis doloribus iusto sint culpa expedita ducimus incidunt similique quod. In, deleniti
+            voluptates?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores enim, similique assumenda quidem fuga
+            officiis accusantium, tempore consequuntur molestiae sapiente dignissimos voluptas mollitia. Ad nostrum rem
+            eaque neque quos voluptatem.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reprehenderit architecto, dolor quibusdam
+            voluptate, earum fugiat dolorem repudiandae laboriosam quidem doloribus tempora eos consequatur. Incidunt
+            sed dolore minus neque! Mollitia.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum voluptates deserunt aliquid
+            praesentium officia quae ex animi ipsa, cumque enim perferendis possimus unde ea libero blanditiis nesciunt
+            suscipit molestias!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad delectus laborum rem impedit assumenda, nihil
+            distinctio sed est voluptatibus accusamus obcaecati necessitatibus ea a beatae laboriosam veniam. Dolor,
+            exercitationem debitis!
+        </p>
+    </article>
 
-
-        <div _ngcontent class="form-group input-group">
-            <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
-                <label _ngcontent-c5>Color</label>
-            </div>
-            <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
-                <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="color"
-                    placeholder="Color" required="" type="text">
-            </div>
-        </div>
-
-
-        <div _ngcontent class="form-group input-group">
-            <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
-                <label _ngcontent-c5>Tamaño</label>
-            </div>
-            <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
-                <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="size"
-                    placeholder="Tamaño" required="" type="text">
-            </div>
-        </div>
-
-
-        <div _ngcontent class="form-group input-group">
-            <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
-                <label _ngcontent-c5>Sexo</label>
-            </div>
-            <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
-                <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="edad"
-                    placeholder="Edad" required="" type="text">
-            </div>
-        </div>
-        <div class="container col-6 md-6 mt-4">
-            <input id="boton" type="submit" value="Buscar" class="btn btn-outline-success btn-block">
-        </div>
-    </form>
-</div>
-<div class="container">
-    <div id="tarjeta-perro">
-        <div class="card-deck mt-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional
-                        content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="mt-5" id="buscador">
+        <h2 class="text-center mt-3"><i class="fa fa-search"></i> BUSCADOR</h2>
+        <form class="mt-3" [formGroup]="buscador" (ngSubmit)="onSubmit()">
+            <div _ngcontent class="form-group input-group">
+                <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                    <label _ngcontent-c5>Perrera</label>
+                </div>
+                <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                    <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
+                        formcontrolname="perrera" placeholder="Perrera" required="" type="text"
+                        *ngFor="let perrera of arrPerreras">
+                        <option value=""></option>
+                        <option value="">{{perrera.nombre}}</option>
+                        <!-- <option value="ascanmadrid">ASCAN MADRID</option>
+                        <option value="vozanimal">ASOCIACION LA VOZ ANIMAL</option>
+                        <option value="alba">PROTECTORA ALBA</option>
+                        <option value="anna">PROTECTORA ANNA</option>
+                        <option value="arpa">PROTECCIÓN ANIMAL ARPA</option>
+                        <option value="nuevavida">PROTECTORA NUEVA VIDA</option>
+                        <option value="perrikus">PROTECTORA PERRIKUS</option>
+                        <option value="elrefigio">EL REFUGIO</option>
+                        <option value="rivanimal">RIVANIMAL</option> -->
+                    </select>
                 </div>
             </div>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div _ngcontent class="form-group input-group">
+                <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                    <label _ngcontent-c5>Raza</label>
+                </div>
+                <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                    <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
+                        formcontrolname="raza" placeholder="Raza" required="" type="text">
+                        <option value=""></option>
+                    </select>
                 </div>
             </div>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional
-                        content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+            <div _ngcontent class="form-group input-group">
+                <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                    <label _ngcontent-c5>Color</label>
+                </div>
+                <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                    <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
+                        formcontrolname="color" placeholder="Color" required="" type="text">
+                        <option value=""></option>
+                    </select>
+
+                </div>
+            </div>
+
+
+            <div _ngcontent class="form-group input-group">
+                <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                    <label _ngcontent-c5>Tamaño</label>
+                </div>
+                <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                    <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
+                        formcontrolname="size" placeholder="Tamaño" required="" type="text">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div _ngcontent class="form-group input-group">
+                <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
+                    <label _ngcontent-c5>Sexo</label>
+                </div>
+                <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
+                    <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
+                        formcontrolname="edad" placeholder="Edad" required="" type="text">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="container col-6 md-6 mt-4">
+                <input id="boton" type="submit" value="Buscar" class="btn btn-outline-success btn-block">
+            </div>
+        </form>
+    </div>
+
+    <div id="images" class="mt-5">
+        <div id="tarjeta-perro">
+            <div class="card-deck mt-4">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional
+                            content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional
+                            content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
                 </div>
             </div>
         </div>
