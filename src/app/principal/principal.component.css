@@ -1,0 +1,19 @@
+div #images{
+    margin-bottom: 50px;
+}
+
+div #card{
+    border: 1px solid black;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+#card2{
+    margin-top: 10px;
+}
+
+#imagen{
+padding: 15px;
+margin-top: 20px;
+
+}

@@ -8,3 +8,17 @@
 #btn{
     margin-bottom: 20px;
 }
+
+h1{
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.wrapper{
+    margin-top: 50px;
+
+}
+
+.container p{
+    font-size: 20px;
+}

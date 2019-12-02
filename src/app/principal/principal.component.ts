@@ -4,6 +4,7 @@ import { PerrosService } from '../perros.service';
 import { PerrerasService } from '../perreras.service';
 
 
+
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',
@@ -12,6 +13,8 @@ import { PerrerasService } from '../perreras.service';
 export class PrincipalComponent implements OnInit {
 
   buscador: FormGroup;
+  arrPerreras: any[];
+  arrPerros: any[];
 
   constructor(private perrosService: PerrosService, private perrerasService: PerrerasService) {
     this.buscador = new FormGroup({
@@ -29,9 +32,15 @@ export class PrincipalComponent implements OnInit {
 
 
   ngOnInit() {
+
     this.perrerasService.getPerreras()
       .then(response => {
         this.arrPerreras = response;
+      });
+
+    this.perrosService.getPerros()
+      .then(response => {
+        this.arrPerros = response;
       });
   }
 }
