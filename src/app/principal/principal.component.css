@@ -1,11 +1,7 @@
-div #images{
-    margin-bottom: 50px;
-}
-
 div #card{
-    border: 1px solid black;
-    margin-top: 50px;
-    margin-left: 200px;
+    border: 5px solid lightgreen;
+    /* margin-top: 50px;
+    margin-left: 200px; */
 }
 
 #card2{

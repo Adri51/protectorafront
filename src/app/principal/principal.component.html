@@ -34,9 +34,17 @@
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
                         formControlName="perrera" placeholder="Perrera" required="" type="text">
                         <option value=""></option>
+<<<<<<< HEAD
                         <option *ngFor="let perrera of arrPerreras" value="{{perrera.id}}">
                             {{perrera.nombre}}
+=======
+<<<<<<< HEAD
+                        <option value="" *ngFor="let perrera of arrPerreras">{{perrera.nombre}}</option>
+=======
+                        <option *ngFor="let perrera of arrPerreras" value="{{perrera.nombre}}">{{perrera.nombre}}
+>>>>>>> af5f3488c6181a588ecb3cb7985ebed4fa712c22
                         </option>
+>>>>>>> 5769c6165db95fc040a60720a9d07cdfab7214c9
                     </select>
                 </div>
             </div>
@@ -101,13 +109,23 @@
     </div>
 
 
-    <div id="card" class="card mb-3" style="max-width: 700px;" *ngFor="let perro of arrPerros">
+    <div id="card" class="row mt-4 mb-4" *ngFor="let perro of arrPerros">
         <div id="card2" class="row no-gutters">
             <div class="col-md-4">
                 <img id="imagen" [src]="perro.foto" class="img-fluid" alt="Responsive image">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
+<<<<<<< HEAD
+                    <h5 class="card-title"><mark class="font-weight-bold text-uppercase">{{perro.nombre}}</mark></h5>
+                    <p class="card-text"><mark class="font-weight-bold">RAZA:</mark> {{perro.raza}}</p>
+                    <p class="card-text"><mark class="font-weight-bold">SEXO:</mark> {{perro.sexo}}</p>
+                    <p class="card-text"><mark class="font-weight-bold">COLOR:</mark> {{perro.color}}</p>
+                    <p class="card-text"><mark class="font-weight-bold">TAMAÑO:</mark>{{perro.tamano}} </p>
+                    <p class="card-text"><mark class="font-weight-bold">EDAD:</mark> {{perro.edad}}</p>
+                    <p class="card-text"><mark class="font-weight-bold">CARACTERÍSTICAS:</mark>{{perro.caracteristicas}}
+                    </p>
+=======
                     <h5 class="card-title">{{perro.nombre}}</h5>
                     <p class="card-text">RAZA: {{perro.raza}}</p>
                     <p class="card-text">SEXO: {{perro.sexo}}</p>
@@ -115,26 +133,8 @@
                     <p class="card-text">TAMAÑO: {{perro.tamano}} </p>
                     <p class="card-text">EDAD: {{perro.edad}}</p>
                     <p class="card-text">{{perro.caracteristicas}}</p>
+>>>>>>> 5769c6165db95fc040a60720a9d07cdfab7214c9
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- <div id="images" class="mt-5">
-        <div id="tarjeta-perro">
-            <div class="card-deck mt-4">
-                <div class="card" *ngFor="let perro of arrPerros">
-                    <img [src]="" class="img-fluid img-thumbnail">
-                    <div class="card-body">
-                        <h5 class="card-title">{{perro.nombre}}</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional
-                            content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div> -->
-</div>
