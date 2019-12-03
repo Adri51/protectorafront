@@ -35,15 +35,6 @@
                         formcontrolname="perrera" placeholder="Perrera" required="" type="text">
                         <option value=""></option>
                         <option value="" *ngFor="let perrera of arrPerreras">{{perrera.nombre}}</option>
-                        <!-- <option value="ascanmadrid">ASCAN MADRID</option>
-                        <option value="vozanimal">ASOCIACION LA VOZ ANIMAL</option>
-                        <option value="alba">PROTECTORA ALBA</option>
-                        <option value="anna">PROTECTORA ANNA</option>
-                        <option value="arpa">PROTECCIÓN ANIMAL ARPA</option>
-                        <option value="nuevavida">PROTECTORA NUEVA VIDA</option>
-                        <option value="perrikus">PROTECTORA PERRIKUS</option>
-                        <option value="elrefigio">EL REFUGIO</option>
-                        <option value="rivanimal">RIVANIMAL</option> -->
                     </select>
                 </div>
             </div>
@@ -103,41 +94,23 @@
         </form>
     </div>
 
-    <div id="images" class="mt-5">
-        <div id="tarjeta-perro">
-            <div class="card-deck mt-4">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional
-                            content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional
-                            content. This card has even longer content than the first to show that equal height action.
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
+
+    <div id="card" class="row mt-4 mb-4" *ngFor="let perro of arrPerros">
+        <div id="card2" class="row no-gutters">
+            <div class="col-md-4">
+                <img id="imagen" [src]="perro.foto" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><mark class="font-weight-bold text-uppercase">{{perro.nombre}}</mark></h5>
+                    <p class="card-text"><mark class="font-weight-bold">RAZA:</mark> {{perro.raza}}</p>
+                    <p class="card-text"><mark class="font-weight-bold">SEXO:</mark> {{perro.sexo}}</p>
+                    <p class="card-text"><mark class="font-weight-bold">COLOR:</mark> {{perro.color}}</p>
+                    <p class="card-text"><mark class="font-weight-bold">TAMAÑO:</mark>{{perro.tamano}} </p>
+                    <p class="card-text"><mark class="font-weight-bold">EDAD:</mark> {{perro.edad}}</p>
+                    <p class="card-text"><mark class="font-weight-bold">CARACTERÍSTICAS:</mark>{{perro.caracteristicas}}
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-</div>
