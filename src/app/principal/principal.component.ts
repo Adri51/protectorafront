@@ -20,6 +20,8 @@ export class PrincipalComponent implements OnInit {
   arrSize: any[];
   arrSexo: any[];
 
+
+
   constructor(private perrosService: PerrosService, private perrerasService: PerrerasService) {
     this.buscador = new FormGroup({
       perrera: new FormControl('', [
@@ -40,6 +42,7 @@ export class PrincipalComponent implements OnInit {
     this.perrerasService.getPerreras()
       .then(response => {
         this.arrPerreras = response;
+        //console.log(this.arrPerreras);
       });
 
     this.perrosService.getPerros()
@@ -69,6 +72,8 @@ export class PrincipalComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.buscador.value);
+    this.perrosService.getFindPerro(this.buscador.value);
+
   }
 }
+
