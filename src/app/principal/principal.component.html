@@ -32,18 +32,10 @@
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                        formcontrolname="perrera" placeholder="Perrera" required="" type="text">
+                        formControlName="perrera" placeholder="Perrera" required="" type="text">
                         <option value=""></option>
-                        <option value="" *ngFor="let perrera of arrPerreras">{{perrera.nombre}}</option>
-                        <!-- <option value="ascanmadrid">ASCAN MADRID</option>
-                        <option value="vozanimal">ASOCIACION LA VOZ ANIMAL</option>
-                        <option value="alba">PROTECTORA ALBA</option>
-                        <option value="anna">PROTECTORA ANNA</option>
-                        <option value="arpa">PROTECCIÓN ANIMAL ARPA</option>
-                        <option value="nuevavida">PROTECTORA NUEVA VIDA</option>
-                        <option value="perrikus">PROTECTORA PERRIKUS</option>
-                        <option value="elrefigio">EL REFUGIO</option>
-                        <option value="rivanimal">RIVANIMAL</option> -->
+                        <option *ngFor="let perrera of arrPerreras" value="{{perrera.nombre}}">{{perrera.nombre}}
+                        </option>
                     </select>
                 </div>
             </div>
@@ -53,8 +45,9 @@
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                        formcontrolname="raza" placeholder="Raza" required="" type="text">
+                        formControlName="raza" placeholder="Raza" required="" type="text">
                         <option value=""></option>
+                        <option value="{{raza.raza}}" *ngFor="let raza of arrRaza">{{raza.raza}}</option>
                     </select>
                 </div>
             </div>
@@ -65,8 +58,9 @@
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                        formcontrolname="color" placeholder="Color" required="" type="text">
+                        formControlName="color" placeholder="Color" required="" type="text">
                         <option value=""></option>
+                        <option value="{{color.color}}" *ngFor="let color of arrColor">{{color.color}}</option>
                     </select>
 
                 </div>
@@ -79,8 +73,9 @@
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                        formcontrolname="size" placeholder="Tamaño" required="" type="text">
+                        formControlName="tamano" placeholder="Tamaño" required="" type="text">
                         <option value=""></option>
+                        <option value="{{size.tamano}}" *ngFor="let size of arrSize">{{size.tamano}}</option>
                     </select>
                 </div>
             </div>
@@ -92,8 +87,9 @@
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                        formcontrolname="edad" placeholder="Edad" required="" type="text">
+                        formControlName="edad" placeholder="Edad" required="" type="text">
                         <option value=""></option>
+                        <option value="{{sexo.sexo}}" *ngFor="let sexo of arrSexo">{{sexo.sexo}}</option>
                     </select>
                 </div>
             </div>
@@ -115,7 +111,7 @@
                     <p class="card-text">RAZA: {{perro.raza}}</p>
                     <p class="card-text">SEXO: {{perro.sexo}}</p>
                     <p class="card-text">COLOR: {{perro.color}}</p>
-                    <p class="card-text">TAMAÑO: </p>
+                    <p class="card-text">TAMAÑO: {{perro.tamano}} </p>
                     <p class="card-text">EDAD: {{perro.edad}}</p>
                     <p class="card-text">{{perro.caracteristicas}}</p>
                 </div>

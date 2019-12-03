@@ -15,6 +15,10 @@ export class PrincipalComponent implements OnInit {
   buscador: FormGroup;
   arrPerreras: any[];
   arrPerros: any[];
+  arrRaza: any[];
+  arrColor: any[];
+  arrSize: any[];
+  arrSexo: any[];
 
   constructor(private perrosService: PerrosService, private perrerasService: PerrerasService) {
     this.buscador = new FormGroup({
@@ -25,7 +29,7 @@ export class PrincipalComponent implements OnInit {
         Validators.required
       ]),
       color: new FormControl(''),
-      tamaño: new FormControl(''),
+      tamano: new FormControl(''),
       edad: new FormControl('')
     });
   }
@@ -42,5 +46,29 @@ export class PrincipalComponent implements OnInit {
       .then(response => {
         this.arrPerros = response;
       });
+
+    this.perrosService.getPerrosRaza()
+      .then(response => {
+        this.arrRaza = response;
+      });
+
+    this.perrosService.getPerrosColor()
+      .then(response => {
+        this.arrColor = response;
+      });
+
+    this.perrosService.getPerrosSize()
+      .then(response => {
+        this.arrSize = response;
+      });
+
+    this.perrosService.getPerrosSexo()
+      .then(response => {
+        this.arrSexo = response;
+      });
+  }
+
+  onSubmit() {
+    console.log(this.buscador.value);
   }
 }
