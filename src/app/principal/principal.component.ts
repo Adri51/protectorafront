@@ -19,6 +19,7 @@ export class PrincipalComponent implements OnInit {
   arrColor: any[];
   arrSize: any[];
   arrSexo: any[];
+  arrFiltrado: any[];
 
 
 
@@ -64,10 +65,15 @@ export class PrincipalComponent implements OnInit {
       .then(response => {
         this.arrSexo = response;
       });
+
+
   }
 
   onSubmit() {
-    this.perrosService.getFindPerro(this.buscador.value);
+    this.perrosService.getFindPerro(this.buscador.value)
+      .then(response => {
+        this.arrFiltrado = response;
+      });
 
   }
 }
