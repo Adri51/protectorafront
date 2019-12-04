@@ -51,7 +51,7 @@ export class RegistroComponent implements OnInit {
   }
 
   ngOnInit() {
-    const controlNombre = this.registro.controls;
+    const controlNombre = this.registro.controls['nombre'];
     console.log(controlNombre);
   }
 

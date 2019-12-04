@@ -2,7 +2,11 @@ nav{
     font-size: 20px;
     height: 70px;
     font-weight: bold;
-    
+}
+
+#navbarNavDropdown ul li a:hover {
+    background-color: rgb(19, 180, 73);
+    border-radius: 10px;
 }
 
 nav .navbar-brand {
@@ -33,3 +37,19 @@ div ul li a{
     display: inline-block;
     color: black;
 }
+
+.active{
+    background-color: rgb(19, 180, 73);
+    border-radius: 10px;
+    color:whitesmoke;
+}
+
+/* -fillable
+    > .item
+      background-image linear-gradient(to bottom, transparent 50%, #333 50%)
+      background-position top
+      background-size 100% 200%
+
+      &:hover, &.-active
+        background-position bottom
+        color #fff */
