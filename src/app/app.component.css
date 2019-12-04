@@ -24,3 +24,12 @@ div ul li{
 div ul li a{
     cursor: pointer;
 }
+#img{
+    font-size: 80px;
+    color:black;
+    margin-top: 10px;
+}
+.modal-footer a{
+    display: inline-block;
+    color: black;
+}

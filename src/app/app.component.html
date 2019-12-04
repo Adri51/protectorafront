@@ -12,12 +12,13 @@
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/quienessomos']">Quienes Somos</a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/registro']">Registrate</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter"
                     [routerLink]="['/login']">Inicia Sesion</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/registro']">Registrate</a>
             </li>
 
         </ul>
@@ -27,50 +28,42 @@
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+
+        <div class="modal-content" style="background-color: #78F683">
+            <button type="button" class="close text-right p-3" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="text-center mb-4">
+                <i id="img" class="fa fa-user-circle"></i>
+            </div>
+            <div class="text-center">
+                <h5 class="modal-title" id="exampleModalLongTitle">INICIO SESIÓN</h5>
             </div>
             <div class="modal-body">
-                ...
+                <div class="form-group mt-2">
+                    <div class="">
+                        <label>Email</label>
+                        <input type="text" class="form-control" formControlName="email">
+                    </div>
+                    <div class="form-group mt-2">
+                        <div class="">
+                            <label>Contrañesa</label>
+                            <input type="text" class="form-control" formControlName="password">
+                        </div>
+                    </div>
+                    <div id="btn" class="text-center">
+                        <input type="submit" value="Enviar" class="btn btn-outline-success btn-block">
+                    </div>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="modal-footer text-center mt-4">
+                <a href="#">Olvidaste tu contraseña</a>
+                <a [routerLink]="['/registro']" data-dismiss="modal">¿No tienes cuenta?
+                    Registrate</a>
             </div>
         </div>
     </div>
 </div>
-
-<!-- <nav class="navbar navbar-expand-lg navbar navbar-light sticky-top" style="background-color: #78F683;">
-    <a id="titulo" class="navbar-brand" [routerLink]="['/principal']"><i class="fa fa-paw fa-lg"></i> ADOPTADOG</a>
-    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        <span class="icon-bar"></span>
-    </button>
-
-    <div id="navbarCollapse" class="navbar-collapse collapse  navbar-right">
-        <ul class="navbar-nav mr-sm-2">
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/mapa']">Mapa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/quienessomos']">Quienes Somos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/login']">Inicia Sesion</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/registro']">Registrate</a>
-            </li>
-        </ul>
-
-    </div>
-</nav> -->
 <router-outlet></router-outlet>
 <app-footer class=" footer">
 </app-footer>
