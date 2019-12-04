@@ -71,11 +71,8 @@ export class PrincipalComponent implements OnInit {
   }
 
   onSubmit() {
-    this.perrosService.getFindPerro(this.buscador.value);
-
-    this.perrosService.getFiltradoPerro()
+    this.perrosService.getFindPerro(this.buscador.value)
       .then(response => {
-        console.log(response);
         this.arrFiltrado = response;
       });
 

@@ -28,14 +28,9 @@ export class PerrosService {
     return this.http.get<any[]>('http://localhost:3000/api/perros/sexo').toPromise();
   }
 
-  getFiltradoPerro(values) {
-    return this.http.post('http://localhost:3000/api/perros/buscar', values, {}).toPromise();
-  }
 
-  getFindPerro(values) {
-    //console.log(values);
-
-    return this.http.post('http://localhost:3000/api/perros/buscar', values, {}).toPromise();
+  getFindPerro(values): Promise<any[]> {
+    return this.http.post<any[]>('http://localhost:3000/api/perros/buscar', values).toPromise();
   }
 }
 
