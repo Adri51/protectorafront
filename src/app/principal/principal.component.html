@@ -34,7 +34,8 @@
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
                         formControlName="perrera" placeholder="Perrera" required="" type="text">
                         <option value=""></option>
-                        <option value="" *ngFor="let perrera of arrPerreras">{{perrera.nombre}}</option>
+                        <option *ngFor="let perrera of arrPerreras" value="{{perrera.id}}">
+                            {{perrera.nombre}}
                     </select>
                 </div>
             </div>
@@ -46,7 +47,7 @@
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
                         formControlName="raza" placeholder="Raza" required="" type="text">
                         <option value=""></option>
-                        <option value="{{raza.raza}}" *ngFor="let raza of arrRaza">{{raza.raza}}</option>
+                        <option value="{{perro.raza}}" *ngFor="let perro of arrRaza">{{perro.raza}}</option>
                     </select>
                 </div>
             </div>
@@ -59,7 +60,7 @@
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
                         formControlName="color" placeholder="Color" required="" type="text">
                         <option value=""></option>
-                        <option value="{{color.color}}" *ngFor="let color of arrColor">{{color.color}}</option>
+                        <option value="{{perro.color}}" *ngFor="let perro of arrColor">{{perro.color}}</option>
                     </select>
 
                 </div>
@@ -74,7 +75,7 @@
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
                         formControlName="tamano" placeholder="Tamaño" required="" type="text">
                         <option value=""></option>
-                        <option value="{{size.tamano}}" *ngFor="let size of arrSize">{{size.tamano}}</option>
+                        <option value="{{perro.tamano}}" *ngFor="let perro of arrSize">{{perro.tamano}}</option>
                     </select>
                 </div>
             </div>
@@ -88,7 +89,7 @@
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
                         formControlName="edad" placeholder="Edad" required="" type="text">
                         <option value=""></option>
-                        <option value="{{sexo.sexo}}" *ngFor="let sexo of arrSexo">{{sexo.sexo}}</option>
+                        <option value="{{perro.sexo}}" *ngFor="let perro of arrSexo">{{perro.sexo}}</option>
                     </select>
                 </div>
             </div>

@@ -27,4 +27,11 @@ export class PerrosService {
   getPerrosSexo(): Promise<any[]> {
     return this.http.get<any[]>('http://localhost:3000/api/perros/sexo').toPromise();
   }
+
+  getFindPerro(values) {
+    console.log(values);
+
+    return this.http.post('http://localhost:3000/api/perros/buscar', values, {}).toPromise();
+  }
 }
+
