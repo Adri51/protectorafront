@@ -51,10 +51,12 @@ export class RegistroComponent implements OnInit {
   }
 
   ngOnInit() {
+    const controlNombre = this.registro.controls;
+    console.log(controlNombre);
   }
 
   onSubmit() {
-    console.log(this.registro.value);
+    // console.log(this.registro.value);
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { PerrosService } from '../perros.service';
 import { PerrerasService } from '../perreras.service';
 
@@ -28,7 +28,7 @@ export class PrincipalComponent implements OnInit {
       raza: new FormControl(''),
       color: new FormControl(''),
       tamano: new FormControl(''),
-      edad: new FormControl('')
+      edad: new FormControl(''),
     });
   }
 
@@ -38,7 +38,6 @@ export class PrincipalComponent implements OnInit {
     this.perrerasService.getPerreras()
       .then(response => {
         this.arrPerreras = response;
-        //console.log(this.arrPerreras);
       });
 
     this.perrosService.getPerros()
