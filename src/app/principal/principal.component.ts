@@ -24,12 +24,8 @@ export class PrincipalComponent implements OnInit {
 
   constructor(private perrosService: PerrosService, private perrerasService: PerrerasService) {
     this.buscador = new FormGroup({
-      perrera: new FormControl('', [
-        Validators.required
-      ]),
-      raza: new FormControl('', [
-        Validators.required
-      ]),
+      perrera: new FormControl(''),
+      raza: new FormControl(''),
       color: new FormControl(''),
       tamano: new FormControl(''),
       edad: new FormControl('')
