@@ -6,6 +6,8 @@ import { MapaComponent } from './mapa/mapa.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { RegistroComponent } from './registro/registro.component';
+import { ModalmapaComponent } from './modalmapa/modalmapa.component';
+import { CondicionesComponent } from './condiciones/condiciones.component';
 
 
 const routes: Routes = [
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path: 'mapa', component: MapaComponent },
   { path: 'quienessomos', component: NosotrosComponent },
   { path: 'principal', component: PrincipalComponent },
-  { path: 'registro', component: RegistroComponent }
+  { path: 'registro', component: RegistroComponent },
+  { path: 'modalmapa', component: ModalmapaComponent },
+  { path: 'condiciones', component: CondicionesComponent }
 ];
 
 @NgModule({
