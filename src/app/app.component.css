@@ -6,7 +6,13 @@ nav{
 
 #navbarNavDropdown ul li a:hover {
     background-color: rgb(19, 180, 73);
-    border-radius: 10px;
+    border-radius: 20px;
+}
+#inicio{
+    background-color: rgb(252, 255, 61);
+    border-radius: 20px;
+    color: black;
+
 }
 
 nav .navbar-brand {

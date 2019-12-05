@@ -1,6 +1,10 @@
 div #card{
+<<<<<<< HEAD
     border: 5px solid lightgreen;
     
+=======
+    border: 3px solid lightgreen;
+>>>>>>> 1f2c53cbbd11492ed0704be101f2d93e104d51d9
     /* margin-top: 50px;
     margin-left: 200px; */
 }
