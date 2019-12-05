@@ -13,6 +13,8 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { FooterComponent } from './footer/footer.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { RegistroComponent } from './registro/registro.component';
+import { ModalmapaComponent } from './modalmapa/modalmapa.component';
+import { CondicionesComponent } from './condiciones/condiciones.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RegistroComponent } from './registro/registro.component';
     NosotrosComponent,
     FooterComponent,
     CabeceraComponent,
-    RegistroComponent
+    RegistroComponent,
+    ModalmapaComponent,
+    CondicionesComponent
   ],
   imports: [
     BrowserModule,
