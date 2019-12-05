@@ -2,13 +2,13 @@ input.ng-valid{
     border: 1px solid green;
 }
 
-input.ng-invalid{
+input.ng-invalid.ng-touched {
     border: 1px solid red;
 }
 
 .error {
     color: red;
-    font-size: 14px;
+    font-size: 16px;
 }
 #btn {
     padding-bottom: 20px;

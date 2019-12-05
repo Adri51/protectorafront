@@ -103,7 +103,7 @@
     </div>
 
 
-    <div id="card" class="row mt-4 mb-4" *ngFor="let perro of arrFiltrado">
+    <div id="card" class="row mt-4 mb-4 shadow-lg p-4 mb-5 bg-white rounded" *ngFor="let perro of arrFiltrado">
         <div id="card2" class="row no-gutters">
             <div class="col-md-4">
                 <img id="imagen" [src]="perro.foto" class="img-fluid" alt="Responsive image">
@@ -117,7 +117,9 @@
                     <p class="card-text"><mark class="font-weight-bold">TAMAÑO:</mark>{{perro.tamano}} </p>
                     <p class="card-text"><mark class="font-weight-bold">EDAD:</mark> {{perro.edad}}</p>
                     <p class="card-text"><mark class="font-weight-bold">CARACTERÍSTICAS:</mark>{{perro.caracteristicas}}
-                    </p>
+                        <p class="card-text"><mark class="font-weight-bold">CENTRO:</mark>{{perro.raza}} <button
+                                type="button" class="btn btn-info btn-sm mb-1" [routerLink]="['/mapa']">IR A
+                                MAPA</button> </p>
                 </div>
             </div>
         </div>
