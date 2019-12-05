@@ -118,9 +118,41 @@
                     <p class="card-text"><mark class="font-weight-bold">EDAD:</mark> {{perro.edad}} año/s</p>
                     <p class="card-text"><mark class="font-weight-bold">CARACTERÍSTICAS:</mark>{{perro.caracteristicas}}
                         <p class="card-text"><mark class="font-weight-bold">CENTRO:</mark>{{perro.raza}}
-                            <button type="button" class="btn btn-info btn-sm mb-1" [routerLink]="['/mapa']">IR A
+                            <button type="button" class="btn btn-info btn-sm mb-1" data-toggle="modal"
+                                data-target="#exampleModalMapa">IR A
                                 MAPA</button> </p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="exampleModalMapa" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="background-color: #78F683" [formGroup]="login" (ngSubmit)="onSubmit()">
+                <button type="button" class="close text-right p-3" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="text-center">
+                    <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">MAPA</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="bg text center">
+                        <div class="mapa" id='mapId' #Gmap></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="bg">
+        <div class="mapa" id='mapId' #Gmap></div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+</div>
+</div>
+</div> -->

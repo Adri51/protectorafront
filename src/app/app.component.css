@@ -49,13 +49,3 @@ div ul li a{
     border-radius: 10px;
     color:whitesmoke;
 }
-
-/* -fillable
-    > .item
-      background-image linear-gradient(to bottom, transparent 50%, #333 50%)
-      background-position top
-      background-size 100% 200%
-
-      &:hover, &.-active
-        background-position bottom
-        color #fff */
