@@ -106,7 +106,7 @@
     <div id="card" class="row mt-4 mb-4" *ngFor="let perro of arrFiltrado">
         <div id="card2" class="row no-gutters">
             <div class="col-md-4">
-                <img id="imagen" [src]="perro.foto" class="img-fluid" alt="Responsive image">
+                <img id="imagen" [src]="perro.foto" class="img-fluid rounded" alt="Responsive image">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
@@ -115,7 +115,7 @@
                     <p class="card-text"><mark class="font-weight-bold">SEXO:</mark> {{perro.sexo}}</p>
                     <p class="card-text"><mark class="font-weight-bold">COLOR:</mark> {{perro.color}}</p>
                     <p class="card-text"><mark class="font-weight-bold">TAMAÑO:</mark>{{perro.tamano}} </p>
-                    <p class="card-text"><mark class="font-weight-bold">EDAD:</mark> {{perro.edad}}</p>
+                    <p class="card-text"><mark class="font-weight-bold">EDAD:</mark> {{perro.edad}} año/s</p>
                     <p class="card-text"><mark class="font-weight-bold">CARACTERÍSTICAS:</mark>{{perro.caracteristicas}}
                     </p>
                 </div>
