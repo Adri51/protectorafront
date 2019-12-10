@@ -11,6 +11,9 @@ div #card{
 #imagen{
 padding: 15px;
 margin-top: 20px;
+}
 
-
+.mapa{
+    height: 300px;
+    max-width: 100% ;
 }
