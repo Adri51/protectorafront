@@ -118,16 +118,22 @@ export class MapaComponent implements OnInit {
     });
     perrikusMarker.setMap(this.map);
 
-    const elRefugioMmarker = new google.maps.Marker({
+    const elRefugioMarker = new google.maps.Marker({
       position: { lat: 40.481445, lng: - 3.659882 },
       title: 'EL REFUGIO'
     });
-    elRefugioMmarker.setMap(this.map);
+    elRefugioMarker.setMap(this.map);
 
     const rivanimalMarker = new google.maps.Marker({
-      position: { lt: 40.356191, lng: - 3.543498 },
+      position: { lat: 40.356191, lng: - 3.543498 },
       title: 'RIVANIMAL'
     });
     rivanimalMarker.setMap(this.map);
+
+    const almanimalMarker = new google.maps.Marker({
+      position: { lat: 40.406669, lng: - 3.875029 },
+      title: 'ALMANIMAL'
+    });
+    almanimalMarker.setMap(this.map);
   }
 }

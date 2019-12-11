@@ -128,7 +128,7 @@
     <div class="modal fade" id="exampleModalMapa" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content" style="background-color: #78F683" [formGroup]="login" (ngSubmit)="onSubmit()">
+            <div class="modal-content" style="background-color: #78F683">
                 <button type="button" class="close text-right p-3" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -142,7 +142,7 @@
                         <p class="card-text"> <strong>EMAIL:</strong> {{perrera.email}}</p>
                         <p class="card-text"> <strong>TELEFONO:</strong> {{perrera.telefono}}</p>
                     </div>
-                    <div class="mapa" id='mapId' #Gmap></div>
+                    <div class="mapa" id='mapPerrera' #Gmap></div>
                 </div>
             </div>
         </div>
