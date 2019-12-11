@@ -25,16 +25,13 @@ export class RegistroComponent implements OnInit {
         Validators.required,
         Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
       ]),
-      fechadenacimiento: new FormControl('', [
-        Validators.required
-      ]),
       password: new FormControl('', [
         Validators.required
       ]),
-      repitpassword: new FormControl('', [
+      repeat_password: new FormControl('', [
         Validators.required
       ]),
-      codigopostal: new FormControl('', [
+      codigo_postal: new FormControl('', [
         Validators.required
       ]),
       direccion: new FormControl('', [
@@ -61,11 +58,15 @@ export class RegistroComponent implements OnInit {
 
   onSubmit() {
     // console.log(this.registro.value);
+    this.clientesService.insertUsuario(this.registro.value)
+      .then(response => {
+        console.log(response);
+      })
   }
 
   passwordValidator(registro: FormGroup) {
     const passwordControl = registro.controls['password'];
-    const repitpasswordControl = registro.controls['repitpassword'];
+    const repitpasswordControl = registro.controls['repeat_password'];
 
     if (passwordControl.value === repitpasswordControl.value) {
       return null;

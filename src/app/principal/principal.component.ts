@@ -177,7 +177,7 @@ export class PrincipalComponent implements OnInit {
     elRefugioMmarker.setMap(this.map);
 
     const rivanimalMarker = new google.maps.Marker({
-      position: { lt: 40.356191, lng: - 3.543498 },
+      position: { lat: 40.356191, lng: - 3.543498 },
       title: 'RIVANIMAL'
     });
     rivanimalMarker.setMap(this.map);
