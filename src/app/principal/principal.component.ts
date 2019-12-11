@@ -43,18 +43,14 @@ export class PrincipalComponent implements OnInit {
 
 
   ngOnInit() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.loadMap(position);
-      });
-    } else {
-      alert('Ud. está aquí');
-    }
+
 
     this.perrerasService.getPerreras()
       .then(response => {
 
         this.arrPerreras = response;
+
+
       });
 
     this.perrosService.getPerros()
@@ -98,89 +94,38 @@ export class PrincipalComponent implements OnInit {
     this.perrera = null;
     this.perrera = this.arrPerreras.find((item) => item.id == perreraId);
 
-    //console.log(this.perrera);
+    this.pintarMapaPerrera(this.perrera);
   }
 
-  // MAPA
+  pintarMapaPerrera(pPerrera) {
 
-  loadMap(posicion) {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(() => {
+        this.directionsService = new google.maps.DirectionsService();
+        this.directionsDisplay = new google.maps.DirectionsRenderer();
 
-    this.directionsService = new google.maps.DirectionsService();
-    this.directionsDisplay = new google.maps.DirectionsRenderer();
+        const mapProps = {
 
-    const mapProps = {
+          center: new google.maps.LatLng(parseFloat(pPerrera.lat), parseFloat(pPerrera.lng)),
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
 
-      center: new google.maps.LatLng(posicion.coords.latitude, posicion.coords.longitude),
-      positionUno: new google.maps.LatLng(40.451250, - 3.345232),
-      zoom: 9,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
+        this.map = new google.maps.Map(document.getElementById('mapPerrera'), mapProps);
 
-    this.map = new google.maps.Map(document.getElementById('mapId'), mapProps);
-
-    this.directionsDisplay.setMap(this.map);
-
+        this.directionsDisplay.setMap(this.map);
 
 
-    const Marker = new google.maps.Marker({
-      position: mapProps.center,
-      title: 'Ud. Está aquí'
-    });
-    Marker.setMap(this.map);
 
-    const ascanMarker = new google.maps.Marker({
-      position: { lat: 40.451250, lng: - 3.345232 },
-      title: 'ASCAN MADRID',
-    });
-    ascanMarker.setMap(this.map);
+        const Marker = new google.maps.Marker({
+          position: mapProps.center,
+          title: pPerrera.nombre
+        });
+        Marker.setMap(this.map);
+      });
+    }
 
-    const vozAnimakMarker = new google.maps.Marker({
-      position: { lat: 40.240746, lng: - 3.754222 },
-      title: 'ASOCIACION LA VOZ ANIMAL'
-    });
-    vozAnimakMarker.setMap(this.map);
-
-    const albaMarker = new google.maps.Marker({
-      position: { lat: 40.540147, lng: - 3.397872 },
-      title: 'PROTECTORA ALBA'
-    });
-    albaMarker.setMap(this.map);
-
-    const annaMarker = new google.maps.Marker({
-      position: { lat: 40.674603, lng: - 3.474912 },
-      title: 'PROTECTORA ANNA'
-    });
-    annaMarker.setMap(this.map);
-
-    const arpaMarker = new google.maps.Marker({
-      position: { lat: 40.023244, lng: - 3.603719 },
-      title: 'PROTECCIÓN ANIMAL ARPA'
-    });
-    arpaMarker.setMap(this.map);
-
-    const nuevaVidaMarker = new google.maps.Marker({
-      position: { lat: 40.472883, lng: - 3.875216 },
-      title: 'PROTECTORA NUEVA VIDA'
-    });
-    nuevaVidaMarker.setMap(this.map);
-
-    const perrikusMarker = new google.maps.Marker({
-      position: { lat: 41.037583, lng: - 3.620449 },
-      title: 'PROTECTORA PERRIKUS'
-    });
-    perrikusMarker.setMap(this.map);
-
-    const elRefugioMmarker = new google.maps.Marker({
-      position: { lat: 40.481445, lng: - 3.659882 },
-      title: 'EL REFUGIO'
-    });
-    elRefugioMmarker.setMap(this.map);
-
-    const rivanimalMarker = new google.maps.Marker({
-      position: { lt: 40.356191, lng: - 3.543498 },
-      title: 'RIVANIMAL'
-    });
-    rivanimalMarker.setMap(this.map);
   }
+
 }
 
