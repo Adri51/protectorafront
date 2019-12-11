@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { ClientesService } from './clientes.service';
 
 
 
@@ -13,10 +14,25 @@ export class AppComponent {
 
   login: FormGroup;
 
-  constructor() {
+  constructor(private clientesService: ClientesService) {
     this.login = new FormGroup({
       email: new FormControl(''),
       password: new FormControl('')
     });
+  }
+
+  onSubmit(pLogin) {
+    //console.log(pLogin.value)
+
+    this.clientesService.login(pLogin.value)
+      .then(response => {
+        if (response['error']) {
+          alert(response['error']);
+        } else {
+          localStorage.setItem('user-token', response['exito']);
+        }
+      }).catch(err => {
+        console.log(err);
+      });
   }
 }

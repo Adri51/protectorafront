@@ -11,4 +11,9 @@ export class ClientesService {
   insertUsuario(values): Promise<any> {
     return this.http.post('http://localhost:3000/api/usuarios', values).toPromise();
   }
+
+  login(values) {
+    console.log(values);
+    return this.http.post('http://localhost:3000/api/usuarios/login', values).toPromise();
+  }
 }
