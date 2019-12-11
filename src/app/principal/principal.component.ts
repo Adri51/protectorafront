@@ -23,6 +23,7 @@ export class PrincipalComponent implements OnInit {
   arrSize: any[];
   arrSexo: any[];
   arrFiltrado: any[];
+  perrera: any[];
 
   directionsService: any;
   directionsDisplay: any;
@@ -52,12 +53,14 @@ export class PrincipalComponent implements OnInit {
 
     this.perrerasService.getPerreras()
       .then(response => {
+
         this.arrPerreras = response;
       });
 
     this.perrosService.getPerros()
       .then(response => {
         this.arrPerros = response;
+
       });
 
     this.perrosService.getPerrosRaza()
@@ -89,6 +92,13 @@ export class PrincipalComponent implements OnInit {
         this.arrFiltrado = response;
       });
 
+  }
+
+  getPerreraForFk(perreraId) {
+    this.perrera = null;
+    this.perrera = this.arrPerreras.find((item) => item.id == perreraId);
+
+    //console.log(this.perrera);
   }
 
   // MAPA
