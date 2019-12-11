@@ -52,7 +52,7 @@ export class MapaComponent implements OnInit {
 
     const Marker = new google.maps.Marker({
       position: mapProps.center,
-      title: 'Ud. Está aquí'
+      title: 'Ud. Está aquí',
     });
     Marker.setMap(this.map);
 
@@ -61,6 +61,15 @@ export class MapaComponent implements OnInit {
       title: 'ASCAN MADRID',
     });
     ascanMarker.setMap(this.map);
+
+    const infowindowAscan = new google.maps.InfoWindow({
+      content: '<div> <h5>ASCAN</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+    });
+
+    google.maps.event.addListener(ascanMarker, 'click', function () {
+
+      infowindowAscan.open(this.map, ascanMarker);
+    });
 
     const vozAnimakMarker = new google.maps.Marker({
       position: { lat: 40.240746, lng: - 3.754222 },
@@ -86,11 +95,22 @@ export class MapaComponent implements OnInit {
     });
     arpaMarker.setMap(this.map);
 
+
+
     const nuevaVidaMarker = new google.maps.Marker({
       position: { lat: 40.472883, lng: - 3.875216 },
-      title: 'PROTECTORA NUEVA VIDA'
+      title: 'PROTECTORA NUEVAVIDA'
     });
     nuevaVidaMarker.setMap(this.map);
+
+    const infowindowNuevaVida = new google.maps.InfoWindow({
+      content: '<div> <h5>PROTECTORA NUEVAVIDA</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+    });
+
+    google.maps.event.addListener(nuevaVidaMarker, 'click', function () {
+
+      infowindowNuevaVida.open(this.map, nuevaVidaMarker);
+    });
 
     const perrikusMarker = new google.maps.Marker({
       position: { lat: 41.037583, lng: - 3.620449 },
