@@ -13,7 +13,8 @@ nav{
     background-color: rgb(252, 255, 61);
     border-radius: 20px;
     color: black;
-    margin-bottom: 5px;
+    padding: 15px;
+    border:1px solid black;
 
 }
 
@@ -57,10 +58,11 @@ nav div a {
     border:1px solid black;
 }
 
-#con{
-    background-color: rgb(252, 255, 61);
+/* #con{
+    background-color: #09FF00;
+
     font-size: 20px;
     border-radius: 20px;
     color: black;
     border:1px solid black;
-}
+} */
