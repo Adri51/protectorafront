@@ -5,7 +5,7 @@ nav{
 }
 
 #navbarNavDropdown ul li a:hover {
-    background-color: rgb(19, 180, 73);
+   
     border-radius: 20px;
     
 }
@@ -13,11 +13,13 @@ nav{
     background-color: rgb(252, 255, 61);
     border-radius: 20px;
     color: black;
-    padding: 15px;
-    border:1px solid black;
+    padding: 5px;
 
 }
 
+#on{
+    font-size:40px
+}
 nav .navbar-brand {
     font-size: 30px;
 }
@@ -32,6 +34,10 @@ nav .navbar-brand {
 div ul li{
     margin-left: 50px;
 
+}
+
+#link{
+    margin-left: 100px;
 }
 
 div ul li a{
@@ -52,17 +58,7 @@ nav div a {
 }
 
 .active{
-    background-color: rgb(19, 180, 73);
+     text-decoration: underline black;
     border-radius: 20px;
     color:whitesmoke;
-    border:1px solid black;
 }
-
-/* #con{
-    background-color: #09FF00;
-
-    font-size: 20px;
-    border-radius: 20px;
-    color: black;
-    border:1px solid black;
-} */
