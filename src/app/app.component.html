@@ -14,9 +14,10 @@
                     Somos</a>
             </li>
 
-            <li class="nav-item text-center">
+            <li *ngIf="token == ''" class="nav-item text-center">
                 <a class="nav-link mt-2" [routerLink]="['/registro']" [routerLinkActive]="'active'"> Registrate</a>
             </li>
+<<<<<<< HEAD
             <li class="nav-item text-center d-block d-lg-none">
                 <a id="inicio" class="nav-link mt-2" data-toggle="modal" data-target="#exampleModalCenter"
                     [routerLink]="['/login']" [routerLinkActive]="'active'"> Inicio Sesión </a>
@@ -25,6 +26,16 @@
                 <p class="mt-2">Conectado <i class="fas fa-paw"></i></p>
 
             </li> -->
+=======
+            <li *ngIf="token == ''" class="nav-item text-center d-block d-lg-none">
+                <a id="inicio" class="nav-link" data-toggle="modal" data-target="#exampleModalCenter"
+                    [routerLink]="['/login']" [routerLinkActive]="'active'"> Inicio Sesión </a>
+            </li>
+            <li *ngIf="token != ''" class="nav-item text-center d-block d-lg-none">
+                <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="background-color: red;"> Cerrar Sesión
+                </a>
+            </li>
+>>>>>>> 647b95c4b62b9578421609b25550a08ffe0b92a1
             <br>
         </ul>
 
@@ -33,6 +44,15 @@
     <div class="d-none d-lg-block mx-auto">
         <a id="inicio" data-toggle="modal" data-target="#exampleModalCenter" [routerLink]="['/login']"
             [routerLinkActive]="'active'"> Inicio Sesión </a>
+    </div>
+
+    <div *ngIf="token == ''" class="nav-item text-center d-none d-lg-block nx-auto">
+        <a id="inicio" class="nav-link" data-toggle="modal" data-target="#exampleModalCenter" [routerLink]="['/login']"
+            [routerLinkActive]="'active'"> Inicio Sesión </a>
+    </div>
+    <div *ngIf="token != ''" class="nav-item text-center d-none d-lg-block nx-auto">
+        <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="background-color: red;"> Cerrar Sesión
+        </a>
     </div>
 
 

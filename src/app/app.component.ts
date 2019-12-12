@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ClientesService } from './clientes.service';
+import { Router } from '@angular/router';
 
 
 
@@ -13,8 +14,13 @@ export class AppComponent {
   title = 'ProtectoraFront';
 
   login: FormGroup;
+  token: any;
 
-  constructor(private clientesService: ClientesService) {
+  constructor(private clientesService: ClientesService, private router: Router) {
+
+    this.token = "";
+
+    console.log('token', this.token);
     this.login = new FormGroup({
       email: new FormControl(''),
       password: new FormControl('')
@@ -28,10 +34,17 @@ export class AppComponent {
           alert(response['error']);
         } else {
           localStorage.setItem('user-token', response['exito']);
-          alert(response['Te has logado correctamente']);
+          this.token = localStorage.getItem('user-token');
+
         }
       }).catch(err => {
         console.log(err);
       });
+  }
+
+  cerrarSesion() {
+    localStorage.removeItem('user-token');
+    this.router.navigate(['/principal/']);
+    this.token = "";
   }
 }
