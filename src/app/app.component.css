@@ -50,4 +50,13 @@ div ul li a{
     background-color: rgb(19, 180, 73);
     border-radius: 20px;
     color:whitesmoke;
+    border:1px solid black;
+}
+
+#con{
+    background-color: rgb(252, 255, 61);
+    font-size: 20px;
+    border-radius: 20px;
+    color: black;
+    border:1px solid black;
 }
