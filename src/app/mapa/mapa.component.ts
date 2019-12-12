@@ -77,11 +77,31 @@ export class MapaComponent implements OnInit {
     });
     vozAnimakMarker.setMap(this.map);
 
+    const infowindowVozAnimal = new google.maps.InfoWindow({
+      content: '<div> <h5>ASOCIACIÓN LA VOZ ANIMAL</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+    });
+
+    google.maps.event.addListener(vozAnimakMarker, 'click', function () {
+
+      infowindowVozAnimal.open(this.map, vozAnimakMarker);
+    });
+
     const albaMarker = new google.maps.Marker({
       position: { lat: 40.540147, lng: - 3.397872 },
       title: 'PROTECTORA ALBA'
     });
     albaMarker.setMap(this.map);
+
+    const infowindowAlba = new google.maps.InfoWindow({
+      content: '<div> <h5>PROTECTORA ALBA</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+    });
+
+    google.maps.event.addListener(albaMarker, 'click', function () {
+
+      infowindowAlba.open(this.map, albaMarker);
+    });
+
+
 
     const annaMarker = new google.maps.Marker({
       position: { lat: 40.674603, lng: - 3.474912 },
@@ -89,11 +109,34 @@ export class MapaComponent implements OnInit {
     });
     annaMarker.setMap(this.map);
 
+    const infowindowAnna = new google.maps.InfoWindow({
+      content: '<div> <h5>PROTECTORA ANNA</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+    });
+
+    google.maps.event.addListener(annaMarker, 'click', function () {
+
+      infowindowAnna.open(this.map, annaMarker);
+    });
+
+
+
+
     const arpaMarker = new google.maps.Marker({
       position: { lat: 40.023244, lng: - 3.603719 },
       title: 'PROTECCIÓN ANIMAL ARPA'
     });
     arpaMarker.setMap(this.map);
+
+    const infowindowArpa = new google.maps.InfoWindow({
+      content: '<div> <h5>PROTECTORA ARPA</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+    });
+
+    google.maps.event.addListener(arpaMarker, 'click', function () {
+
+      infowindowArpa.open(this.map, arpaMarker);
+    });
+
+
 
 
 
@@ -112,11 +155,17 @@ export class MapaComponent implements OnInit {
       infowindowNuevaVida.open(this.map, nuevaVidaMarker);
     });
 
+
+
+
     const perrikusMarker = new google.maps.Marker({
       position: { lat: 41.037583, lng: - 3.620449 },
       title: 'PROTECTORA PERRIKUS'
     });
     perrikusMarker.setMap(this.map);
+
+
+
 
     const elRefugioMarker = new google.maps.Marker({
       position: { lat: 40.481445, lng: - 3.659882 },
@@ -124,11 +173,18 @@ export class MapaComponent implements OnInit {
     });
     elRefugioMarker.setMap(this.map);
 
+
+
+
+
     const rivanimalMarker = new google.maps.Marker({
       position: { lat: 40.356191, lng: - 3.543498 },
       title: 'RIVANIMAL'
     });
     rivanimalMarker.setMap(this.map);
+
+
+
 
     const almanimalMarker = new google.maps.Marker({
       position: { lat: 40.406669, lng: - 3.875029 },
