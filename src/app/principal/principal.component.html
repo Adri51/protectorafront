@@ -32,7 +32,7 @@
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                        formControlName="perrera" placeholder="Perrera" required="" type="text">
+                        formControlName="perrera" placeholder="Perrera" type="text">
                         <option value=""></option>
 
                         <option *ngFor="let perrera of arrPerreras" value="{{perrera.id}}">
@@ -48,7 +48,7 @@
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                        formControlName="raza" placeholder="Raza" required="" type="text">
+                        formControlName="raza" placeholder="Raza" type="text">
                         <option value=""></option>
                         <option value="{{perro.raza}}" *ngFor="let perro of arrRaza">{{perro.raza}}</option>
                     </select>
@@ -61,7 +61,7 @@
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                        formControlName="color" placeholder="Color" required="" type="text">
+                        formControlName="color" placeholder="Color" type="text">
                         <option value=""></option>
                         <option value="{{perro.color}}" *ngFor="let perro of arrColor">{{perro.color}}</option>
                     </select>
@@ -76,7 +76,7 @@
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                        formControlName="tamano" placeholder="Tamaño" required="" type="text">
+                        formControlName="tamano" placeholder="Tamaño" type="text">
                         <option value=""></option>
                         <option value="{{perro.tamano}}" *ngFor="let perro of arrSize">{{perro.tamano}}</option>
                     </select>
@@ -90,7 +90,7 @@
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 inputGroupContainer">
                     <select _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-invalid"
-                        formControlName="edad" placeholder="Edad" required="" type="text">
+                        formControlName="edad" placeholder="Edad" type="text">
                         <option value=""></option>
                         <option value="{{perro.sexo}}" *ngFor="let perro of arrSexo">{{perro.sexo}}</option>
                     </select>
@@ -137,10 +137,10 @@
                 </div>
                 <div class="modal-body">
                     <div id="perrera" class="bg text center">
-                        <p class="card-text"><strong>NOMBRE: </strong> {{perrera.nombre}} </p>
-                        <p class="card-text"><strong>DIRECCIÓN: </strong> {{perrera.direccion}}</p>
-                        <p class="card-text"> <strong>EMAIL:</strong> {{perrera.email}}</p>
-                        <p class="card-text"> <strong>TELEFONO:</strong> {{perrera.telefono}}</p>
+                        <p class="card-text"><strong>NOMBRE: </strong> {{arrayPerrera.nombre}} </p>
+                        <p class="card-text"><strong>DIRECCIÓN: </strong> {{arrayPerrera.direccion}}</p>
+                        <p class="card-text"> <strong>EMAIL:</strong> {{arrayPerrera.email}}</p>
+                        <p class="card-text"> <strong>TELEFONO:</strong> {{arrayPerrera.telefono}}</p>
                     </div>
                     <div class="mapa" id='mapPerrera' #Gmap></div>
                 </div>
