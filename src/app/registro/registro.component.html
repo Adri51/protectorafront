@@ -16,7 +16,7 @@
                 <label>Apellidos</label>
                 <input type="text" class="form-control" formControlName="apellidos">
             </div>
-            <div class="col-md-3 mb-3">
+            <div class="col-md-4 mb-3">
                 <label>Email</label>
                 <div class="input-group">
                     <input type="text" class="form-control" formControlName="email">
@@ -31,7 +31,7 @@
         <div class="form-row">
             <div class="col-md-5 mb-3">
                 <label>Contraseña</label>
-                <input type="password" class="form-control" formControlName="password">
+                <input type="password" class="form-control" formControlName="password" data-toggle="password">
                 <p class="error"
                     *ngIf="registro.controls.password.errors?.required && registro.controls.password.touched">
                     El campo constaseña es requerido
@@ -40,7 +40,7 @@
 
             <div class="col-md-5 mb-3">
                 <label>Repite Contraseña</label>
-                <input type="password" class="form-control" formControlName="repeat_password">
+                <input type="password" class="form-control" formControlName="repeat_password" data-toggle="password">
                 <p class="error"
                     *ngIf="registro.controls.repeat_password.errors?.required && registro.controls.repeat_password.touched">
                     El campo repite contraseña es requerido
@@ -82,10 +82,13 @@
             <a class="p-3" href="#" data-toggle="modal" data-target="#exampleModalCondiciones"> He leído y acepto
                 los
                 términos y condiciones de uso</a>
-            <a></a>
+            <p class="error" *ngIf="registro.controls.telefono.errors?.required">
+                Debes aceptar las condiciones
+            </p>
         </div>
         <div id="btn" class="text-center mt-4">
-            <input type="submit" value="Enviar" class="btn btn-success btn-lg btn-block">
+            <input type="submit" value="Enviar" class="btn btn-outline-success btn-lg btn-block"
+                [disabled]="registro.invalid" [routerLink]="['/registro']">
         </div>
         <br>
         <br>
