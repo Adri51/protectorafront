@@ -13,7 +13,8 @@ export class ClientesService {
   }
 
   login(values) {
-    console.log(values);
+
     return this.http.post('http://localhost:3000/api/usuarios/login', values).toPromise();
+
   }
 }

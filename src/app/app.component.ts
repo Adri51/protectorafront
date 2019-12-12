@@ -15,10 +15,12 @@ export class AppComponent {
 
   login: FormGroup;
   token: any;
+  user: any;
 
   constructor(private clientesService: ClientesService, private router: Router) {
 
     this.token = "";
+    this.user = "";
 
     console.log('token', this.token);
     this.login = new FormGroup({
@@ -29,12 +31,16 @@ export class AppComponent {
 
   onSubmit(pLogin) {
     this.clientesService.login(pLogin.value)
+
       .then(response => {
         if (response['error']) {
           alert(response['error']);
         } else {
           localStorage.setItem('user-token', response['exito']);
+          localStorage.setItem('nombre', response['nombre']);
           this.token = localStorage.getItem('user-token');
+          this.user = localStorage.getItem('nombre');
+          console.log(this.user)
 
         }
       }).catch(err => {

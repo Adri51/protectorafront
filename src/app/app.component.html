@@ -62,6 +62,10 @@
         <a id="inicio" class="nav-link" data-toggle="modal" data-target="#exampleModalCenter" [routerLink]="['/login']"
             [routerLinkActive]="'active'"> <i id="on" class="fas fa-power-off"></i> </a>
     </div>
+    <div *ngIf="token != ''" class="nav-item text-center d-none d-lg-block nx-auto mr-1">
+        <a class="nav-link"><i id="user" class="fas fa-user"></i> {{user}}
+        </a>
+    </div>
     <div *ngIf="token != ''" class="nav-item text-center d-none d-lg-block nx-auto">
         <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="background-color: red;"><i id="on"
                 class="fas fa-power-off"></i>

@@ -167,6 +167,8 @@ export class MapaComponent implements OnInit {
 
 
 
+
+
     const elRefugioMarker = new google.maps.Marker({
       position: { lat: 40.481445, lng: - 3.659882 },
       title: 'EL REFUGIO'
