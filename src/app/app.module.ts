@@ -7,28 +7,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { LoginComponent } from './login/login.component';
-import { BuscadorComponent } from './buscador/buscador.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { FooterComponent } from './footer/footer.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { RegistroComponent } from './registro/registro.component';
-import { ModalmapaComponent } from './modalmapa/modalmapa.component';
-import { CondicionesComponent } from './condiciones/condiciones.component';
+import { ForoComponent } from './foro/foro.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
     LoginComponent,
-    BuscadorComponent,
     MapaComponent,
     NosotrosComponent,
     FooterComponent,
     CabeceraComponent,
     RegistroComponent,
-    ModalmapaComponent,
-    CondicionesComponent
+    ForoComponent,
+
   ],
   imports: [
     BrowserModule,

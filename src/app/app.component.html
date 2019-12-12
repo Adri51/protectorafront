@@ -17,6 +17,9 @@
             <li *ngIf="token == ''" class="nav-item text-center">
                 <a class="nav-link mt-2" [routerLink]="['/registro']" [routerLinkActive]="'active'"> Registrate</a>
             </li>
+            <li *ngIf="token != ''" class="nav-item text-center">
+                <a class="nav-link mt-2" [routerLink]="['/foro']" [routerLinkActive]="'active'">Foro</a>
+            </li>
             <li *ngIf="token == ''" class="nav-item text-center d-block d-lg-none">
                 <a id="inicio" class="nav-link" data-toggle="modal" data-target="#exampleModalCenter"
                     [routerLink]="['/login']" [routerLinkActive]="'active'"> Inicio Sesión </a>

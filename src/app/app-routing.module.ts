@@ -1,26 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { BuscadorComponent } from './buscador/buscador.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { RegistroComponent } from './registro/registro.component';
-import { ModalmapaComponent } from './modalmapa/modalmapa.component';
-import { CondicionesComponent } from './condiciones/condiciones.component';
+import { ForoComponent } from './foro/foro.component';
+
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/principal' },
 
   { path: 'login', component: LoginComponent },
-  { path: 'buscador', component: BuscadorComponent },
   { path: 'mapa', component: MapaComponent },
   { path: 'quienessomos', component: NosotrosComponent },
   { path: 'principal', component: PrincipalComponent },
   { path: 'registro', component: RegistroComponent },
-  { path: 'modalmapa', component: ModalmapaComponent },
-  { path: 'condiciones', component: CondicionesComponent }
+  { path: 'foro', component: ForoComponent }
 ];
 
 @NgModule({
