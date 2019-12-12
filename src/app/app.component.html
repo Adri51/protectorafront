@@ -49,11 +49,13 @@
                     <div class="form-group mt-2">
                         <div>
                             <label class="font-weight-bold">Contraseña</label>
-                            <input type="text" class="form-control" formControlName="password">
+                            <input type="password" class="form-control" formControlName="password"
+                                data-toggle="password">
                         </div>
                     </div>
                     <div id="btn" class="text-center">
-                        <button (click)="onSubmit(login)" class="btn btn-outline-dark btn-block">Enviar</button>
+                        <button (click)="onSubmit(login)" class="btn btn-outline-dark btn-block" data-dismiss="modal"
+                            [routerLink]="['/principal']">Enviar</button>
                     </div>
                 </div>
             </div>

@@ -23,7 +23,7 @@ export class RegistroComponent implements OnInit {
       ]),
       email: new FormControl('', [
         Validators.required,
-        Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+        Validators.pattern(/^\w+@[a-zA-Z]+?\.[a-zA-Z]{2,3}$/)
       ]),
       password: new FormControl('', [
         Validators.required
@@ -61,7 +61,7 @@ export class RegistroComponent implements OnInit {
     this.clientesService.insertUsuario(this.registro.value)
       .then(response => {
         console.log(response);
-      })
+      });
   }
 
   passwordValidator(registro: FormGroup) {
