@@ -23,7 +23,7 @@ export class PrincipalComponent implements OnInit {
   arrSize: any[];
   arrSexo: any[];
   arrFiltrado: any[];
-  perrera: any[];
+  arrayPerrera: any[];
 
   directionsService: any;
   directionsDisplay: any;
@@ -91,10 +91,10 @@ export class PrincipalComponent implements OnInit {
   }
 
   getPerreraForFk(perreraId) {
-    this.perrera = null;
-    this.perrera = this.arrPerreras.find((item) => item.id == perreraId);
+    this.arrayPerrera = null;
+    this.arrayPerrera = this.arrPerreras.find((item) => item.id === perreraId);
 
-    this.pintarMapaPerrera(this.perrera);
+    this.pintarMapaPerrera(this.arrayPerrera);
   }
 
   pintarMapaPerrera(pPerrera) {
