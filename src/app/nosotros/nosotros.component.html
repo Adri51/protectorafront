@@ -6,15 +6,13 @@
     <article>
         <div class="container">
             <p>
-                Somos Sergio y Adrián, dos personas totalmente independientes a los nos une la misma pasión, el mundo de
-                la
-                tecnología y programación, commpaginado con los animales.
+                Somos Sergio y Adrián, dos personas totalmente independientes a las nos une la misma pasión, el mundo de
+                la tecnología y programación, commpaginado con los animales.
 
                 Adoptadog.es es el proyecto que llevamos varios años en la mente con los objetivos muy claros: por un
-                lado,
-                ayudar a esas personas indecisas que necesitan buscar un animal de compañía de la forma mas rápida
-                posible;
-                otro lado, a las protectoras, que a dia de hoy están cada vez más llenas de animales desprotegidos,
+                lado, ayudar a esas personas indecisas que necesitan buscar un animal de compañía de la forma mas rápida
+                posible; otro lado, a las protectoras, que a dia de hoy están cada vez más llenas de animales
+                desprotegidos,
                 abandonados o maltratados. Y por último, por supuesto a que los perros encuentren una familia cuanto
                 antes.
             </p>
@@ -22,7 +20,8 @@
     </article>
     <div class="container" id="contacto">
         <h2 class="text-center">CONTACTA CON NOSOTROS</h2>
-        <form [formGroup]="contacto" (ngSubmit)="onSubmit()">
+        <form action="mailto:sergio.fraguas@gmail.com" method="POST" enctype="text/plain" [formGroup]="contacto"
+            (ngSubmit)="onSubmit()">
             <div _ngcontent class="form-group input-group">
                 <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
                     <label _ngcontent-c5>Nombre</label>
@@ -52,14 +51,14 @@
             </div>
             <div _ngcontent class="form-group input-group">
                 <div _ngcontent-c5 class="offset-md-1 offset-x1-2 col-md-4 col-x1-3 text-center control-label">
-                    <label _ngcontent-c5>Texto</label>
+                    <label _ngcontent-c5 class="mt-5">Texto</label>
                 </div>
                 <div _ngcontent-c5 class="col-md-4 col-x1-4 green-border-focus">
-                    <textarea class="form-control" id="exampleFormControlTextarea5" rows="10"
+                    <textarea class="form-control" id="exampleFormControlTextarea5" rows="5"
                         placeholder="Escribe tu consulta"></textarea>
                 </div>
             </div>
-            <div id="btn" class="col-2-md-2">
+            <div id="btn" class="container col-6 md-6 mt-4 mb-4">
                 <input type="submit" value="Enviar" class="btn btn-success btn-block">
             </div>
         </form>
