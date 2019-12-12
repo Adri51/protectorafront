@@ -13,8 +13,8 @@ nav{
     background-color: rgb(252, 255, 61);
     border-radius: 20px;
     color: black;
-    margin-bottom: 5px;
     padding: 15px;
+    border:1px solid black;
 
 }
 
