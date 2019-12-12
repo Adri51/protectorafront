@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ClientesService } from '../clientes.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -13,7 +14,7 @@ export class RegistroComponent implements OnInit {
   registro: FormGroup;
 
 
-  constructor(private clientesService: ClientesService) {
+  constructor(private clientesService: ClientesService, private router: Router) {
     this.registro = new FormGroup({
       nombre: new FormControl('', [
         Validators.required
@@ -23,7 +24,7 @@ export class RegistroComponent implements OnInit {
       ]),
       email: new FormControl('', [
         Validators.required,
-        Validators.pattern(/^\w+@[a-zA-Z]+?\.[a-zA-Z]{2,3}$/)
+        Validators.pattern(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i)
       ]),
       password: new FormControl('', [
         Validators.required
@@ -62,6 +63,8 @@ export class RegistroComponent implements OnInit {
       .then(response => {
         console.log(response);
       });
+
+    this.router.navigate(['/principal/']);
   }
 
   passwordValidator(registro: FormGroup) {
