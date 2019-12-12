@@ -36,6 +36,10 @@ div ul li{
 div ul li a{
     cursor: pointer;
 }
+
+nav div a {
+    cursor: pointer;
+}
 #img{
     font-size: 80px;
     color:black;
