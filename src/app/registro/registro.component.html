@@ -20,12 +20,10 @@
                 <label>Email</label>
                 <div class="input-group">
                     <input type="text" class="form-control" formControlName="email">
-                    <p class="error"
-                        *ngIf="registro.controls.email.errors?.required && registro.controls.email.touched">
-                        El campo email es requerido
-                    </p>
                 </div>
-
+                <p class="error" *ngIf="registro.controls.email.errors?.required && registro.controls.email.touched">
+                    El campo email es requerido
+                </p>
             </div>
         </div>
         <div class="form-row">
@@ -82,9 +80,6 @@
             <a class="p-3" href="#" data-toggle="modal" data-target="#exampleModalCondiciones"> He leído y acepto
                 los
                 términos y condiciones de uso</a>
-            <p class="error" *ngIf="registro.controls.telefono.errors?.required">
-                Debes aceptar las condiciones
-            </p>
         </div>
         <div id="btn" class="text-center mt-4">
             <input type="submit" value="Enviar" class="btn btn-outline-success btn-lg btn-block"
@@ -96,8 +91,7 @@
         <div class="modal fade" id="exampleModalCondiciones" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content" style="background-color: #78F683" [formGroup]="login"
-                    (ngSubmit)="onSubmit()">
+                <div class="modal-content" style="background-color: #78F683">
                     <div class="modal-header">
                         <div class="text-center">
                             <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">TÉRMINOS Y CONDICIONES

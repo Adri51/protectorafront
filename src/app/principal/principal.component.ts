@@ -32,6 +32,7 @@ export class PrincipalComponent implements OnInit {
 
 
   constructor(private perrosService: PerrosService, private perrerasService: PerrerasService) {
+    this.perrera = [];
     this.buscador = new FormGroup({
       perrera: new FormControl(''),
       raza: new FormControl(''),
@@ -91,7 +92,7 @@ export class PrincipalComponent implements OnInit {
   }
 
   getPerreraForFk(perreraId) {
-    this.perrera = null;
+    this.perrera = [];
     this.perrera = this.arrPerreras.find((item) => item.id == perreraId);
 
     this.pintarMapaPerrera(this.perrera);

@@ -28,6 +28,7 @@ export class AppComponent {
           alert(response['error']);
         } else {
           localStorage.setItem('user-token', response['exito']);
+          alert(response['Te has logado correctamente']);
         }
       }).catch(err => {
         console.log(err);
