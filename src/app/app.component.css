@@ -5,7 +5,7 @@ nav{
 }
 
 #navbarNavDropdown ul li a:hover {
-    background-color: rgb(19, 180, 73);
+   
     border-radius: 20px;
     
 }
@@ -52,10 +52,9 @@ nav div a {
 }
 
 .active{
-    background-color: rgb(19, 180, 73);
+     text-decoration: underline black;
     border-radius: 20px;
     color:whitesmoke;
-    border:1px solid black;
 }
 
 /* #con{
