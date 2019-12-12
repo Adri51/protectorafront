@@ -22,8 +22,6 @@ export class AppComponent {
   }
 
   onSubmit(pLogin) {
-    //console.log(pLogin.value)
-
     this.clientesService.login(pLogin.value)
       .then(response => {
         if (response['error']) {
