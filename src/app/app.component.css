@@ -20,6 +20,11 @@ nav{
 #on{
     font-size:40px
 }
+
+#user{
+    font-size: 25px;
+}
+
 nav .navbar-brand {
     font-size: 30px;
 }

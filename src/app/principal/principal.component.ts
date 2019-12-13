@@ -39,6 +39,7 @@ export class PrincipalComponent implements OnInit {
       color: new FormControl(''),
       tamano: new FormControl(''),
       edad: new FormControl(''),
+      sexo: new FormControl('')
     });
   }
 
@@ -85,8 +86,10 @@ export class PrincipalComponent implements OnInit {
 
   onSubmit() {
     this.perrosService.getFindPerro(this.buscador.value)
+
       .then(response => {
         this.arrFiltrado = response;
+        console.log(this.arrFiltrado)
       });
 
   }

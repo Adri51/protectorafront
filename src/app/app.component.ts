@@ -16,13 +16,15 @@ export class AppComponent {
   login: FormGroup;
   token: any;
   user: any;
+  userApellido: any;
 
   constructor(private clientesService: ClientesService, private router: Router) {
 
     this.token = "";
     this.user = "";
+    this.userApellido = "";
 
-    console.log('token', this.token);
+
     this.login = new FormGroup({
       email: new FormControl(''),
       password: new FormControl('')
@@ -38,9 +40,11 @@ export class AppComponent {
         } else {
           localStorage.setItem('user-token', response['exito']);
           localStorage.setItem('nombre', response['nombre']);
+          localStorage.setItem('apellidos', response['apellidos']);
           this.token = localStorage.getItem('user-token');
           this.user = localStorage.getItem('nombre');
-          console.log(this.user)
+          this.userApellido = localStorage.getItem('apellidos');
+
 
         }
       }).catch(err => {
