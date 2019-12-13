@@ -6,48 +6,91 @@
     </button>
     <div class="collapse navbar-collapse " style="background-color: #78F683" id="navbarNavDropdown">
         <ul class="navbar-nav">
+
+            <!-- BOTON MAPA RESPONSIVE -->
+
             <li class="nav-item text-center">
                 <a class="nav-link mt-2 p-2 d-block d-lg-none" [routerLink]="['/mapa']" [routerLinkActive]="'active'">
                     Mapa</a>
             </li>
+
+            <!-- BOTON MAPA -->
+
             <li class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 m-2 d-none d-lg-block" [routerLink]="['/mapa']"
                     [routerLinkActive]="'active'">
                     Mapa</a>
             </li>
+
+            <!-- BOTON NOSOTROS RESPONSIVE -->
+
             <li class="nav-item text-center">
                 <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/quienessomos']"
                     [routerLinkActive]="'active'"> Quiénes
                     Somos</a>
             </li>
+
+            <!-- BOTON NOSOTROS -->
+
             <li class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/quienessomos']"
                     [routerLinkActive]="'active'"> Quiénes
                     Somos</a>
             </li>
 
+            <!-- BOTON FORO RESPONSIVE SI HAY TOKEN -->
+
+            <li *ngIf="token == ''" class="nav-item text-center">
+                <a class="nav-link mt-2 d-block d-lg-none" data-toggle="modal" data-target="#exampleModalCenter"
+                    [routerLinkActive]="'active'">Foro</a>
+            </li>
+
+            <!-- BOTON FORO RESPONSIVE SI NO HAY TOKEN -->
+
+            <li *ngIf="token != ''" class="nav-item text-center">
+                <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/foro']"
+                    [routerLinkActive]="'active'">Foro</a>
+            </li>
+
+            <!-- BOTON FORO SI HAY TOKEN -->
+
+            <li *ngIf="token == ''" class="nav-item text-center">
+                <a id="link" class="nav-link mt-2 d-none d-lg-block" data-toggle="modal"
+                    data-target="#exampleModalCenter" [routerLinkActive]="'active'">Foro</a>
+            </li>
+
+            <!-- BOTON FORO SI NO HAY TOKEN -->
+
+            <li *ngIf="token != ''" class="nav-item text-center">
+                <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/foro']"
+                    [routerLinkActive]="'active'">Foro</a>
+            </li>
+
+            <!-- BOTON REGISTRATE RESPONSIVE SI NO HAY TOKEN -->
+
             <li *ngIf="token == ''" class="nav-item text-center">
                 <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/registro']" [routerLinkActive]="'active'">
                     Regístrate</a>
             </li>
+
+            <!-- BOTON REGISTRATE SI NO HAY TOKEN -->
+
             <li *ngIf="token == ''" class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/registro']"
                     [routerLinkActive]="'active'">
                     Regístrate</a>
             </li>
-            <li *ngIf="token != ''" class="nav-item text-center">
-                <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/foro']"
-                    [routerLinkActive]="'active'">Foro</a>
-            </li>
-            <li *ngIf="token != ''" class="nav-item text-center">
-                <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/foro']"
-                    [routerLinkActive]="'active'">Foro</a>
-            </li>
+
+            <!-- MODAL INICIO RESPONSIVE SI NO HAY TOKEN -->
+
             <li *ngIf="token == ''" class="nav-item text-center d-block d-lg-none">
                 <a id="inicio" class="nav-link" data-toggle="modal" data-target="#exampleModalCenter"
                     [routerLink]="['/login']" [routerLinkActive]="'active'"> <i id="on"
                         class="fas fa-power-off"></i></a>
             </li>
+
+            <!-- BOTON ROJO CERRAR SESION RESPONSIVE SI NO HAY TOKEN -->
+
             <li *ngIf="token != ''" class="nav-item text-center d-block d-lg-none">
                 <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="background-color: red;"> <i id="on"
                         class="fas fa-power-off"></i>
@@ -58,14 +101,23 @@
 
 
     </div>
+
+    <!-- MODAL INICIO SI NO HAY TOKEN -->
+
     <div *ngIf="token == ''" class="nav-item text-center d-none d-lg-block nx-auto">
         <a id="inicio" class="nav-link" data-toggle="modal" data-target="#exampleModalCenter" [routerLink]="['/login']"
             [routerLinkActive]="'active'"> <i id="on" class="fas fa-power-off"></i> </a>
     </div>
+
+    <!-- USER INICIO SESION SI HAY TOKEN -->
+
     <div *ngIf="token != ''" class="nav-item text-center d-none d-lg-block nx-auto mr-1">
         <a class="nav-link"><i id="user" class="fas fa-user"></i> {{user}}
         </a>
     </div>
+
+    <!-- BOTON ROJO SI HAY TOKEN -->
+
     <div *ngIf="token != ''" class="nav-item text-center d-none d-lg-block nx-auto">
         <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="background-color: red;"><i id="on"
                 class="fas fa-power-off"></i>

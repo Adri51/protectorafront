@@ -17,4 +17,8 @@ export class ClientesService {
     return this.http.post('http://localhost:3000/api/usuarios/login', values).toPromise();
 
   }
+
+  instertPost(values): Promise<any> {
+    return this.http.post('http://localhost:3000/api/usuarios/post', values).toPromise();
+  }
 }
