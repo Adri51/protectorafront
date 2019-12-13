@@ -1,1 +1,72 @@
-<p>foro works!</p>
+<div class="container mt-5 mb-5">
+    <h2 class="text-center"><i class="fas fa-users"></i> FORO</h2>
+    <br>
+
+    <div class="row">
+        <div class="col-6">
+            <form [formGroup]="foro" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label> <strong>Título</strong> </label>
+                    <input type="text" class="form-control" formControlName="titulo">
+                </div>
+
+                <div class="form-group">
+                    <label> <strong>Texto</strong> </label>
+                    <textarea class="form-control" cols="30" rows="10" formControlName="texto"></textarea>
+                </div>
+
+                <input type="submit" value="Enviar" class="btn btn-outline-secondary btn-block">
+            </form>
+        </div>
+        <div class="col-6">
+            <div class=" card border-success shadow p-3 mb-5 bg-white rounded card w-90 mt-2 mb-3">
+                <div class="card-body">
+                    <div class="card-header text-center">
+                        USUARIO
+                    </div>
+                    <h4 class="card-title">Card title</h4>
+                    <article>
+                        <p class="card-text">Comentario: With supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                    </article>
+                </div>
+                <div class="card-footer text-muted">
+                    1 day ago
+                </div>
+            </div>
+            <div class=" card border-success shadow p-3 mb-5 bg-white rounded card w-90 mt-2 mb-3">
+                <div class="card-body">
+                    <div class="card-header text-center">
+                        USUARIO
+                    </div>
+                    <h4 class="card-title">Card title</h4>
+                    <article>
+                        <p class="card-text">Comentario: With supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                    </article>
+                </div>
+                <div class="card-footer text-muted">
+                    1 day ago
+                </div>
+            </div>
+            <div class=" card border-success shadow p-3 mb-5 bg-white rounded card w-90 mt-2 mb-3">
+                <div class="card-body">
+                    <div class="card-header text-center">
+                        USUARIO
+                    </div>
+                    <h4 class="card-title">Card title</h4>
+                    <article>
+                        <p class="card-text">Comentario: With supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                    </article>
+                </div>
+                <div class="card-footer text-muted">
+                    1 day ago
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
