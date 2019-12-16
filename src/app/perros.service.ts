@@ -5,32 +5,36 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PerrosService {
+  baseUrl: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.baseUrl = 'http://localhost:3000';
+
+  }
 
   getPerros(): Promise<any[]> {
-    return this.http.get<any[]>('http://localhost:3000/api/perros').toPromise();
+    return this.http.get<any[]>(`${this.baseUrl}/api/perros`).toPromise();
   }
 
   getPerrosRaza(): Promise<any[]> {
-    return this.http.get<any[]>('http://localhost:3000/api/perros/raza').toPromise();
+    return this.http.get<any[]>(`${this.baseUrl}/api/perros/raza`).toPromise();
   }
 
   getPerrosColor(): Promise<any[]> {
-    return this.http.get<any[]>('http://localhost:3000/api/perros/color').toPromise();
+    return this.http.get<any[]>(`${this.baseUrl}/api/perros/color`).toPromise();
   }
 
   getPerrosSize(): Promise<any[]> {
-    return this.http.get<any[]>('http://localhost:3000/api/perros/tamano').toPromise();
+    return this.http.get<any[]>(`${this.baseUrl}/api/perros/tamano`).toPromise();
   }
 
   getPerrosSexo(): Promise<any[]> {
-    return this.http.get<any[]>('http://localhost:3000/api/perros/sexo').toPromise();
+    return this.http.get<any[]>(`${this.baseUrl}/api/perros/sexo`).toPromise();
   }
 
 
   getFindPerro(values): Promise<any[]> {
-    return this.http.post<any[]>('http://localhost:3000/api/perros/buscar', values).toPromise();
+    return this.http.post<any[]>(`${this.baseUrl}/api/perros/buscar`, values).toPromise();
   }
 }
 

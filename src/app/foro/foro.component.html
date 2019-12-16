@@ -1,33 +1,12 @@
 <div class="container mt-5 mb-5">
-    <h2 class="text-center"><i class="fas fa-users"></i> FORO</h2>
+    <h2 class="text-center"><i class="fas fa-users"></i> TABLÓN</h2>
     <br>
     <div class="row">
-        <div class="col-6 ">
-            <form class="shadow p-3 mb-5 bg-white rounded" [formGroup]="foro" (ngSubmit)="onSubmit()">
-                <div class="form-group text-center">
-                    <label> <strong style="color: rgba(0, 0, 0, 0.623)">{{user}} {{userApellido}}</strong> </label>
-                </div>
-
-                <div class="form-group">
-                    <label> <strong>Título</strong> </label>
-                    <input type="text" class="form-control" formControlName="titulo">
-                </div>
-
-                <div class="form-group">
-                    <label> <strong>Texto</strong> </label>
-                    <textarea class="form-control" cols="30" rows="10" formControlName="mensaje"></textarea>
-                </div>
-                <div class="col-6 md-6 mt-4 mb-4">
-                    <input type="submit" value="Enviar" class="btn btn-outline-secondary btn-block">
-                </div>
-
-            </form>
-        </div>
-        <div class="col-6">
+        <div class="col-12">
             <div class=" card border-success shadow p-3 mb-5 bg-white rounded card w-90 mt-2 mb-3"
                 *ngFor="let post of arrPost">
                 <div class="card-body">
-                    <div class="card-header text-center">
+                    <div class="card-header text-center text-uppercase">
                         {{post.usuario}}
                     </div>
                     <h4 class="card-title">{{post.titulo}}</h4>
@@ -39,45 +18,31 @@
                 <div class="card-footer text-muted">
                     {{post.fecha}}
                 </div>
-                <input type="submit" value="Contestar"
-                    class=" btn btn-outline-secondary btn-sm btn-block col-2 mt-2 mb-3">
-                <div class="card-footer text-muted">
-                    <p>Usuario</p>
-                    <p>La contestasio</p>
-                </div>
             </div>
-            <!-- <div class=" card border-success shadow p-3 mb-5 bg-white rounded card w-90 mt-2 mb-3">
-                <div class="card-body">
-                    <div class="card-header text-center">
-                        USUARIO
-                    </div>
-                    <h4 class="card-title">Card title</h4>
-                    <article>
-                        <p class="card-text">Comentario: With supporting text below as a natural lead-in to additional
-                            content.
-                        </p>
-                    </article>
-                </div>
-                <div class="card-footer text-muted">
-                    1 day ago
-                </div>
-            </div>
-            <div class=" card border-success shadow p-3 mb-5 bg-white rounded card w-90 mt-2 mb-3">
-                <div class="card-body">
-                    <div class="card-header text-center">
-                        USUARIO
-                    </div>
-                    <h4 class="card-title">Card title</h4>
-                    <article>
-                        <p class="card-text">Comentario: With supporting text below as a natural lead-in to additional
-                            content.
-                        </p>
-                    </article>
-                </div>
-                <div class="card-footer text-muted">
-                    1 day ago
-                </div>
-            </div> -->
         </div>
+    </div>
+    <div class="col-12">
+        <div>
+            <h3 class="text-center mb-2">ESCRIBE ALGO</h3>
+        </div>
+        <form class="shadow p-3 mb-5 bg-white rounded" [formGroup]="foro" (ngSubmit)="onSubmit()">
+            <div class="form-group text-center">
+                <label> <strong style="color: rgba(0, 0, 0, 0.623)">{{user}} {{userApellido}}</strong> </label>
+            </div>
+
+            <div class="form-group">
+                <label> <strong>Título</strong> </label>
+                <input type="text" class="form-control" formControlName="titulo">
+            </div>
+
+            <div class="form-group">
+                <label> <strong>Texto</strong> </label>
+                <textarea class="form-control" cols="30" rows="10" formControlName="mensaje"></textarea>
+            </div>
+            <div class="col-2 md-6 mt-4 mb-4 right">
+                <input type="submit" value="Enviar" class="btn btn-outline-secondary btn-block">
+            </div>
+
+        </form>
     </div>
 </div>
