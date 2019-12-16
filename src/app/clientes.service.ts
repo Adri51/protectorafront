@@ -6,19 +6,23 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ClientesService {
 
-  constructor(private http: HttpClient) { }
+  baseUrl: string;
+
+  constructor(private http: HttpClient) {
+    this.baseUrl = 'http://localhost:3000/api/usuarios';
+  }
 
   // USUARIO
 
   insertUsuario(values): Promise<any> {
-    return this.http.post('http://localhost:3000/api/usuarios', values).toPromise();
+    return this.http.post(`${this.baseUrl}`, values).toPromise();
   }
 
   // LOGIN
 
   login(values) {
 
-    return this.http.post('http://localhost:3000/api/usuarios/login', values).toPromise();
+    return this.http.post(`${this.baseUrl}/login`, values).toPromise();
 
   }
 
@@ -27,7 +31,7 @@ export class ClientesService {
   insertPost(pUser, pUserApellido, values, pFecha): Promise<any> {
     values.usuario = pUser + ' ' + pUserApellido;
     values.fecha = pFecha;
-    return this.http.post('http://localhost:3000/api/usuarios/post', values).toPromise();
+    return this.http.post(`${this.baseUrl}/post`, values).toPromise();
   }
 
   getPintarPost(): Promise<any[]> {
