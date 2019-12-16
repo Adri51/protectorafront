@@ -13,11 +13,12 @@ export class ForoComponent implements OnInit {
   foro: FormGroup;
   user: any;
   userApellido: any;
-  arrPost: any[];
+  arrPost: any;
 
   constructor(private clientesService: ClientesService, private router: Router) {
     this.user = "";
     this.userApellido = "";
+    this.arrPost = [];
 
     this.foro = new FormGroup({
       titulo: new FormControl(''),
@@ -31,15 +32,28 @@ export class ForoComponent implements OnInit {
 
     this.clientesService.getPintarPost()
       .then(response => {
+
+        this.arrPost = response;
+        console.log(response)
+      });
+
+
+
+    /* this.clientesService.getPintarPost()
+      .then(response => {
         this.arrPost = response;
         console.log(response);
-      });
+      }); */
 
   }
 
   onSubmit() {
     this.foro.value.fecha = new Date();
-    this.clientesService.insertPost(this.user, this.userApellido, this.foro.value, this.foro.value.fecha);
+    this.clientesService.insertPost(this.user, this.userApellido, this.foro.value, this.foro.value.fecha).then(response => {
+      this.arrPost = response;
+    });
+    this.foro.reset();
+
   }
 
 

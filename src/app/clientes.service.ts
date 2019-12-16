@@ -36,5 +36,6 @@ export class ClientesService {
 
   getPintarPost(): Promise<any[]> {
     return this.http.get<any[]>('http://localhost:3000/api/usuarios/post').toPromise();
+
   }
 }
