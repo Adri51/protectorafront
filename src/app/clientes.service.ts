@@ -8,9 +8,13 @@ export class ClientesService {
 
   constructor(private http: HttpClient) { }
 
+  // USUARIO
+
   insertUsuario(values): Promise<any> {
     return this.http.post('http://localhost:3000/api/usuarios', values).toPromise();
   }
+
+  // LOGIN
 
   login(values) {
 
@@ -18,7 +22,10 @@ export class ClientesService {
 
   }
 
+  // POST
+
   instertPost(values): Promise<any> {
     return this.http.post('http://localhost:3000/api/usuarios/post', values).toPromise();
   }
+
 }

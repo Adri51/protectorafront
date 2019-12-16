@@ -1,7 +1,6 @@
 <div class="container mt-5 mb-5">
     <h2 class="text-center"><i class="fas fa-users"></i> FORO</h2>
     <br>
-
     <div class="row">
         <div class="col-6 ">
             <form class="shadow p-3 mb-5 bg-white rounded" [formGroup]="foro" (ngSubmit)="onSubmit()">
@@ -32,7 +31,13 @@
                     </article>
                 </div>
                 <div class="card-footer text-muted">
-                    1 day ago
+                    Hace un dia
+                </div>
+                <input type="submit" value="Contestar"
+                    class=" btn btn-outline-secondary btn-sm btn-block col-2 mt-2 mb-3">
+                <div class="card-footer text-muted">
+                    <p>Usuario</p>
+                    <p>La contestasio</p>
                 </div>
             </div>
             <div class=" card border-success shadow p-3 mb-5 bg-white rounded card w-90 mt-2 mb-3">

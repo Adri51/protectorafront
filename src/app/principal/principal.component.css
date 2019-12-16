@@ -1,3 +1,10 @@
+/* .imp{
+    width: 3000px;
+    height:1000px;
+    background-image: url('../../assets/cabecera.png');
+    background-position: center;
+} */
+
 div #card{
     border: 3px solid lightgreen;
     /* margin-top: 50px;

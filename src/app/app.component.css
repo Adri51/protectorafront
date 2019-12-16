@@ -4,14 +4,7 @@ nav{
     font-weight: bold;
 }
 
-#navbarNavDropdown ul li a:hover {
-   
-    border-radius: 20px;
-    
-}
 #inicio{
-    background-color: rgb(252, 255, 61);
-    border-radius: 50px;
     color: black;
     padding: 5px;
 
