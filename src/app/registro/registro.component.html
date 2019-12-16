@@ -40,10 +40,10 @@
                 <label>Repite Contraseña</label>
                 <input type="password" class="form-control" formControlName="repeat_password" data-toggle="password">
                 <p class="error"
-                    *ngIf="registro.controls.repeat_password.errors?.required && registro.controls.repeat_password.errors?.passwordValidator && registro.controls.repeat_password.touched">
+                    *ngIf="registro.controls.repeat_password.errors?.required && registro.controls.repeat_password.touched">
                     El campo repite contraseña es requerido
                 </p>
-                <p class="error" *ngIf="registro.controls.repeat_password.errors?.passwordValidator">
+                <p class="error" *ngIf="registro.hasError('passwordvalidator')">
                     Las contraseñas no coinciden
                 </p>
             </div>
