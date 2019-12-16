@@ -110,7 +110,7 @@ export class MapaComponent implements OnInit {
     annaMarker.setMap(this.map);
 
     const infowindowAnna = new google.maps.InfoWindow({
-      content: '<div> <h5>PROTECTORA ANNA</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+      content: '<div> <h5>PROTECTORA ANNA</h5><p><strong>DIRECCIÓN:</strong> Calle Algete s/n - 28660 Fuente el Saz(Madrid)</p><p><strong>EMAIL:</strong> anaa@anaaweb.com</p><p><strong>TELÉFONO:</strong> 916672036</p>  </div>'
     });
 
     google.maps.event.addListener(annaMarker, 'click', function () {
@@ -128,7 +128,7 @@ export class MapaComponent implements OnInit {
     arpaMarker.setMap(this.map);
 
     const infowindowArpa = new google.maps.InfoWindow({
-      content: '<div> <h5>PROTECTORA ARPA</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+      content: '<div> <h5>PROTECTORA ARPA</h5><p><strong>DIRECCIÓN:</strong> 28300 - Aranjuez(Madrid)</p><p><strong>EMAIL:</strong> aranjuezproteccionanimal@gmail.com</p><p><strong>TELÉFONO:</strong> 657638696</p>  </div>'
     });
 
     google.maps.event.addListener(arpaMarker, 'click', function () {
@@ -165,7 +165,7 @@ export class MapaComponent implements OnInit {
     perrikusMarker.setMap(this.map);
 
     const infowindowPerrikus = new google.maps.InfoWindow({
-      content: '<div> <h5>PROTECTORA PÉRRIKUS</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+      content: '<div> <h5>PROTECTORA PÉRRIKUS</h5><p><strong>DIRECCIÓN:</strong> Diseminado Madrid-Burgos, km.5 28737 - La Serna del Monte(Madrid)</p><p><strong>EMAIL:</strong> info@perrikus.org</p><p><strong>TELÉFONO:</strong> 610376351</p>  </div>'
     });
 
     google.maps.event.addListener(perrikusMarker, 'click', function () {
@@ -185,7 +185,7 @@ export class MapaComponent implements OnInit {
     elRefugioMarker.setMap(this.map);
 
     const infowindowElrefugio = new google.maps.InfoWindow({
-      content: '<div> <h5>PROTECTORA EL REFUGIO</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+      content: '<div> <h5>PROTECTORA EL REFUGIO</h5><p><strong>DIRECCIÓN:</strong> Calle Roquetas de Mar, 21 28033 - El Espinar(Madrid)</p><p><strong>EMAIL:</strong> info@elrefugio.org</p><p><strong>TELÉFONO:</strong> 917303680</p>  </div>'
     });
 
     google.maps.event.addListener(elRefugioMarker, 'click', function () {
@@ -204,7 +204,7 @@ export class MapaComponent implements OnInit {
     rivanimalMarker.setMap(this.map);
 
     const infowindowRivanimal = new google.maps.InfoWindow({
-      content: '<div> <h5>PROTECTORA RIVANIMAL</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+      content: '<div> <h5>PROTECTORA RIVANIMAL</h5><p><strong>DIRECCIÓN:</strong> Calle Marie Curie, 4 28521 - Rivas-Vaciamadrid(Madrid)</p><p><strong>EMAIL:</strong> info@rivanimal.org</p><p><strong>TELÉFONO:</strong> 637809126</p>  </div>'
     });
 
     google.maps.event.addListener(rivanimalMarker, 'click', function () {
@@ -222,7 +222,7 @@ export class MapaComponent implements OnInit {
     almanimalMarker.setMap(this.map);
 
     const infowindowAlmanimal = new google.maps.InfoWindow({
-      content: '<div> <h5>PROTECTORA ALMANIMAL</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+      content: '<div> <h5>PROTECTORA ALMANIMAL</h5><p><strong>DIRECCIÓN:</strong> Avda. Adolfo Suarez s/n 28660 - Boadilla del Monte(Madrid)</p><p><strong>EMAIL:</strong> info@almanimal.org/p><p><strong>TELÉFONO:</strong> 619233588</p>  </div>'
     });
 
     google.maps.event.addListener(almanimalMarker, 'click', function () {

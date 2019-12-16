@@ -47,7 +47,10 @@ export class RegistroComponent implements OnInit {
       provincia: new FormControl('', [
         Validators.required
       ])
-    });
+    },
+      [
+        this.passwordValidator
+      ]);
   }
 
   ngOnInit() {
@@ -67,14 +70,15 @@ export class RegistroComponent implements OnInit {
     this.router.navigate(['/principal/']);
   }
 
-  passwordValidator(registro: FormGroup) {
-    const passwordControl = registro.controls['password'];
-    const repitpasswordControl = registro.controls['repeat_password'];
+  passwordValidator(form: FormGroup) {
+    const passwordControl = form.controls['password'];
+    const repeatpasswordControl = form.controls['repeat_password'];
 
-    if (passwordControl.value === repitpasswordControl.value) {
+    if (passwordControl.value === repeatpasswordControl.value) {
       return null;
     } else {
       return { passwordvalidator: true };
+
     }
   }
 
