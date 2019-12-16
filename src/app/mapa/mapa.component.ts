@@ -63,7 +63,7 @@ export class MapaComponent implements OnInit {
     ascanMarker.setMap(this.map);
 
     const infowindowAscan = new google.maps.InfoWindow({
-      content: '<div> <h5>ASCAN</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+      content: '<div> <h5>ASCAN</h5><p><strong>DIRECCIÓN:</strong> Carretera de Villalbilla km.4 28810 Villalbilla(Madrid)</p><p><strong>EMAIL:</strong> info.ascanmadrid@gmail.com</p><p><strong>TELÉFONO:</strong> 656903860</p>  </div>'
     });
 
     google.maps.event.addListener(ascanMarker, 'click', function () {
@@ -78,7 +78,7 @@ export class MapaComponent implements OnInit {
     vozAnimakMarker.setMap(this.map);
 
     const infowindowVozAnimal = new google.maps.InfoWindow({
-      content: '<div> <h5>ASOCIACIÓN LA VOZ ANIMAL</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+      content: '<div> <h5>ASOCIACIÓN LA VOZ ANIMAL</h5><p><strong>DIRECCIÓN:</strong> Apartado de Correos, 249 - 28983(Madrid)</p><p><strong>EMAIL:</strong> info@lavozanimal.com</p><p><strong>TELÉFONO:</strong> 649022582</p>  </div>'
     });
 
     google.maps.event.addListener(vozAnimakMarker, 'click', function () {
@@ -93,7 +93,7 @@ export class MapaComponent implements OnInit {
     albaMarker.setMap(this.map);
 
     const infowindowAlba = new google.maps.InfoWindow({
-      content: '<div> <h5>PROTECTORA ALBA</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+      content: '<div> <h5>PROTECTORA ALBA</h5><p><strong>DIRECCIÓN:</strong> Camino del corral, 60 - 28816 Camarma de Est.(Madrid)</p><p><strong>EMAIL:</strong> alba@albaonline.org</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
     });
 
     google.maps.event.addListener(albaMarker, 'click', function () {
@@ -164,6 +164,15 @@ export class MapaComponent implements OnInit {
     });
     perrikusMarker.setMap(this.map);
 
+    const infowindowPerrikus = new google.maps.InfoWindow({
+      content: '<div> <h5>PROTECTORA PÉRRIKUS</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+    });
+
+    google.maps.event.addListener(perrikusMarker, 'click', function () {
+
+      infowindowPerrikus.open(this.map, perrikusMarker);
+    });
+
 
 
 
@@ -175,6 +184,15 @@ export class MapaComponent implements OnInit {
     });
     elRefugioMarker.setMap(this.map);
 
+    const infowindowElrefugio = new google.maps.InfoWindow({
+      content: '<div> <h5>PROTECTORA EL REFUGIO</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+    });
+
+    google.maps.event.addListener(elRefugioMarker, 'click', function () {
+
+      infowindowElrefugio.open(this.map, elRefugioMarker);
+    });
+
 
 
 
@@ -185,6 +203,15 @@ export class MapaComponent implements OnInit {
     });
     rivanimalMarker.setMap(this.map);
 
+    const infowindowRivanimal = new google.maps.InfoWindow({
+      content: '<div> <h5>PROTECTORA RIVANIMAL</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+    });
+
+    google.maps.event.addListener(rivanimalMarker, 'click', function () {
+
+      infowindowRivanimal.open(this.map, rivanimalMarker);
+    });
+
 
 
 
@@ -193,5 +220,14 @@ export class MapaComponent implements OnInit {
       title: 'ALMANIMAL'
     });
     almanimalMarker.setMap(this.map);
+
+    const infowindowAlmanimal = new google.maps.InfoWindow({
+      content: '<div> <h5>PROTECTORA ALMANIMAL</h5><p><strong>DIRECCIÓN:</strong> Calle de Oriente, 7 Majadahonda (Madrid)</p><p><strong>EMAIL:</strong> gestionadopciones@nuevavida-adopciones.com</p><p><strong>TELÉFONO:</strong> 690008527</p>  </div>'
+    });
+
+    google.maps.event.addListener(almanimalMarker, 'click', function () {
+
+      infowindowAlmanimal.open(this.map, almanimalMarker);
+    });
   }
 }
