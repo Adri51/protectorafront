@@ -24,8 +24,13 @@ export class ClientesService {
 
   // POST
 
-  instertPost(values): Promise<any> {
+  insertPost(pUser, pUserApellido, values, pFecha): Promise<any> {
+    values.usuario = pUser + ' ' + pUserApellido;
+    values.fecha = pFecha;
     return this.http.post('http://localhost:3000/api/usuarios/post', values).toPromise();
   }
 
+  getPintarPost(): Promise<any[]> {
+    return this.http.get<any[]>('http://localhost:3000/api/usuarios/post').toPromise();
+  }
 }

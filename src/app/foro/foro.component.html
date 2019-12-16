@@ -4,6 +4,10 @@
     <div class="row">
         <div class="col-6 ">
             <form class="shadow p-3 mb-5 bg-white rounded" [formGroup]="foro" (ngSubmit)="onSubmit()">
+                <div class="form-group text-center">
+                    <label> <strong style="color: rgba(0, 0, 0, 0.623)">{{user}} {{userApellido}}</strong> </label>
+                </div>
+
                 <div class="form-group">
                     <label> <strong>Título</strong> </label>
                     <input type="text" class="form-control" formControlName="titulo">
@@ -11,10 +15,12 @@
 
                 <div class="form-group">
                     <label> <strong>Texto</strong> </label>
-                    <textarea class="form-control" cols="30" rows="10" formControlName="texto"></textarea>
+                    <textarea class="form-control" cols="30" rows="10" formControlName="mensaje"></textarea>
+                </div>
+                <div class="col-6 md-6 mt-4 mb-4">
+                    <input type="submit" value="Enviar" class="btn btn-outline-secondary btn-block">
                 </div>
 
-                <input type="submit" value="Enviar" class="btn btn-outline-secondary btn-block">
             </form>
         </div>
         <div class="col-6">
