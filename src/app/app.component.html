@@ -41,7 +41,7 @@
             <!-- BOTON FORO RESPONSIVE SI HAY TOKEN -->
 
             <li *ngIf="token == ''" class="nav-item text-center">
-                <a class="nav-link mt-2 d-block d-lg-none" data-toggle="modal" data-target="#exampleModalCenter"
+                <a class="nav-link mt-2 d-block d-lg-none" data-toggle="modal" data-target="#exampleModalForo"
                     [routerLinkActive]="'active'">Foro</a>
             </li>
 
@@ -55,8 +55,8 @@
             <!-- BOTON FORO SI HAY TOKEN -->
 
             <li *ngIf="token == ''" class="nav-item text-center">
-                <a id="link" class="nav-link mt-2 d-none d-lg-block" data-toggle="modal"
-                    data-target="#exampleModalCenter" [routerLinkActive]="'active'">Foro</a>
+                <a id="link" class="nav-link mt-2 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalForo"
+                    [routerLinkActive]="'active'">Foro</a>
             </li>
 
             <!-- BOTON FORO SI NO HAY TOKEN -->
@@ -157,6 +157,51 @@
                     <div id="btn" class="text-center">
                         <button (click)="onSubmit(login)" class="btn btn-outline-dark btn-block" data-dismiss="modal"
                             [routerLink]="['/principal']">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <a class="font-weight-bold" style="color: rgba(38, 38, 41, 0.685);" href="#">Olvidaste tu contraseña</a>
+            </div>
+            <div class="text-center mb-2">
+                <a [routerLink]="['/registro']" style="color: rgba(38, 38, 41, 0.685);" class="font-weight-bold"
+                    data-dismiss="modal">
+                    ¿No tienes cuenta? Registrate</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PARA INICIAR SESION EN EL FORO -->
+<div class="modal fade" id="exampleModalForo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: #68D65E" [formGroup]="login">
+            <button type="button" class="close text-right p-3" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="text-center mb-4">
+                <i id="img" class="fa fa-user-circle"></i>
+            </div>
+            <div class="text-center">
+                <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">INICIO SESIÓN</h5>
+            </div>
+            <div class="modal-body">
+                <div class="form-group mt-2">
+                    <div>
+                        <label class="font-weight-bold">Email</label>
+                        <input type="text" class="form-control" formControlName="email">
+                    </div>
+                    <div class="form-group mt-2">
+                        <div>
+                            <label class="font-weight-bold">Contraseña</label>
+                            <input type="password" class="form-control" formControlName="password"
+                                data-toggle="password">
+                        </div>
+                    </div>
+                    <div id="btn" class="text-center">
+                        <button (click)="onSubmit(login)" class="btn btn-outline-dark btn-block" data-dismiss="modal"
+                            [routerLink]="['/foro']">Enviar</button>
                     </div>
                 </div>
             </div>
