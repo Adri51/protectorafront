@@ -9,20 +9,20 @@ export class ClientesService {
   baseUrl: string;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = 'http://localhost:3000/api/usuarios';
+    this.baseUrl = 'http://localhost:3000';
   }
 
   // USUARIO
 
   insertUsuario(values): Promise<any> {
-    return this.http.post(`${this.baseUrl}`, values).toPromise();
+    return this.http.post(`${this.baseUrl}/api/usuarios`, values).toPromise();
   }
 
   // LOGIN
 
   login(values) {
 
-    return this.http.post(`${this.baseUrl}/login`, values).toPromise();
+    return this.http.post(`${this.baseUrl}/api/usuarios/login`, values).toPromise();
 
   }
 
@@ -31,11 +31,11 @@ export class ClientesService {
   insertPost(pUser, pUserApellido, values, pFecha): Promise<any> {
     values.usuario = pUser + ' ' + pUserApellido;
     values.fecha = pFecha;
-    return this.http.post(`${this.baseUrl}/post`, values).toPromise();
+    return this.http.post(`${this.baseUrl}/api/usuarios/post`, values).toPromise();
   }
 
   getPintarPost(): Promise<any[]> {
-    return this.http.get<any[]>('http://localhost:3000/api/usuarios/post').toPromise();
+    return this.http.get<any[]>(`${this.baseUrl}/api/usuarios/post`).toPromise();
 
   }
 }

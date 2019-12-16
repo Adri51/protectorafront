@@ -42,28 +42,28 @@
 
             <li *ngIf="token == ''" class="nav-item text-center">
                 <a class="nav-link mt-2 d-block d-lg-none" data-toggle="modal" data-target="#exampleModalCenter"
-                    [routerLinkActive]="'active'">Foro</a>
+                    [routerLinkActive]="'active'">Tablón</a>
             </li>
 
             <!-- BOTON FORO RESPONSIVE SI NO HAY TOKEN -->
 
             <li *ngIf="token != ''" class="nav-item text-center">
                 <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/foro']"
-                    [routerLinkActive]="'active'">Foro</a>
+                    [routerLinkActive]="'active'">Tablón</a>
             </li>
 
             <!-- BOTON FORO SI HAY TOKEN -->
 
             <li *ngIf="token == ''" class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 d-none d-lg-block" data-toggle="modal"
-                    data-target="#exampleModalCenter" [routerLinkActive]="'active'">Foro</a>
+                    data-target="#exampleModalCenter" [routerLinkActive]="'active'">Tablón</a>
             </li>
 
             <!-- BOTON FORO SI NO HAY TOKEN -->
 
             <li *ngIf="token != ''" class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/foro']"
-                    [routerLinkActive]="'active'">Foro</a>
+                    [routerLinkActive]="'active'">Tablón</a>
             </li>
 
             <!-- BOTON REGISTRATE RESPONSIVE SI NO HAY TOKEN -->
@@ -84,7 +84,7 @@
             <!-- MODAL INICIO RESPONSIVE SI NO HAY TOKEN -->
 
             <li *ngIf="token == ''" class="nav-item text-center d-block d-lg-none">
-                <a id="inicio" class="nav-link" data-toggle="modal" data-target="#exampleModalCenter"
+                <a id="inicio" class="nav-link mt-2" data-toggle="modal" data-target="#exampleModalCenter"
                     [routerLink]="['/login']" [routerLinkActive]="'active'"> <i id="on"
                         class="fas fa-user-circle"></i></a>
             </li>
