@@ -31,21 +31,22 @@ export class ForoComponent implements OnInit {
 
   onSubmit() {
     this.foro.value.fecha = new Date();
-    this.clientesService.instertPost(this.foro.value)
-      .then(response => {
-        if (response['error']) {
-          alert(response['error']);
-        } else {
-          localStorage.setItem('user-token', response['exito']);
-          localStorage.setItem('nombre', response['nombre']);
-          this.token = localStorage.getItem('user-token');
-          this.user = localStorage.getItem('nombre');
-        }
-      }).catch(err => {
-        console.log(err);
-      });
+    this.clientesService.instertPost(this.foro.value);
+    // .then(response => {
+    //   if (response['error']) {
+    //     alert(response['error']);
+    //   } else {
+    //     localStorage.setItem('user-token', response['exito']);
+    //     localStorage.setItem('nombre', response['nombre']);
+    //     this.token = localStorage.getItem('user-token');
+    //     this.user = localStorage.getItem('nombre');
+    //   }
+    // }).catch(err => {
+    //   console.log(err);
+    // });
+    // }
+    console.log(this.foro.value);
+
+
   }
-  // console.log(this.foro.value);
-
-
-}
+};

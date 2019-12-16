@@ -92,8 +92,8 @@
             <!-- BOTON ROJO CERRAR SESION RESPONSIVE SI NO HAY TOKEN -->
 
             <li *ngIf="token != ''" class="nav-item text-center d-block d-lg-none">
-                <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: red;"> <i id="on"
-                        class="fas fa-sign-out-alt"></i>
+                <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: rgba(255, 0, 0, 0.76);"> <i
+                        id="on" class="fas fa-sign-out-alt"></i>
                 </a>
             </li>
             <br>
@@ -120,7 +120,7 @@
     <!-- BOTON ROJO SI HAY TOKEN -->
 
     <div *ngIf="token != ''" class="nav-item text-center d-none d-lg-block nx-auto">
-        <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: red;"><i id="on"
+        <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: rgba(255, 0, 0, 0.76);"><i id="on"
                 class="fas fa-sign-out-alt"></i>
         </a>
     </div>
@@ -161,10 +161,11 @@
                 </div>
             </div>
             <div class="text-center mt-2">
-                <a class="font-weight-bold" href="#">Olvidaste tu contraseña</a>
+                <a class="font-weight-bold" style="color: rgba(38, 38, 41, 0.685);" href="#">Olvidaste tu contraseña</a>
             </div>
             <div class="text-center mb-2">
-                <a [routerLink]="['/registro']" class="font-weight-bold" data-dismiss="modal">
+                <a [routerLink]="['/registro']" style="color: rgba(38, 38, 41, 0.685);" class="font-weight-bold"
+                    data-dismiss="modal">
                     ¿No tienes cuenta? Registrate</a>
             </div>
         </div>
