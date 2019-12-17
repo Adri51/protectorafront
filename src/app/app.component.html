@@ -95,8 +95,8 @@
             <!-- BOTON ROJO CERRAR SESION RESPONSIVE SI NO HAY TOKEN -->
 
             <li *ngIf="token != ''" class="nav-item text-center d-block d-lg-none">
-                <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: rgba(255, 0, 0, 0.76);"> <i
-                        id="off" class="fas fa-sign-out-alt"></i>
+                <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: rgba(255, 0, 0, 0.76);"
+                    (click)="scroll()"> <i id="off" class="fas fa-sign-out-alt"></i>
                 </a>
             </li>
             <br>
@@ -123,8 +123,8 @@
     <!-- BOTON ROJO SI HAY TOKEN -->
 
     <div *ngIf="token != ''" class="nav-item text-center d-none d-lg-block nx-auto">
-        <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: rgba(255, 0, 0, 0.76);"><i id="off"
-                class="fas fa-sign-out-alt"></i>
+        <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: rgba(255, 0, 0, 0.76);"
+            (click)="scroll()"><i id="off" class="fas fa-sign-out-alt"></i>
         </a>
     </div>
 
