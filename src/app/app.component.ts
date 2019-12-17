@@ -52,6 +52,14 @@ export class AppComponent {
       });
   }
 
+  scroll() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
   cerrarSesion() {
     localStorage.removeItem('user-token');
     this.router.navigate(['/principal/']);

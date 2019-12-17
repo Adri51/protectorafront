@@ -108,21 +108,22 @@
                 </div>
             </div>
             <div class="container col-6 md-6 mt-4 mb-4">
-                <input href="#CARDPERRO" id="boton" type="submit" value="Buscar"
-                    class="btn btn-outline-secondary btn-block">
+                <button id="boton" type="submit" value="Buscar"
+                    class="btn btn-outline-secondary btn-block">BUSCAR</button>
             </div>
         </form>
     </div>
 
     <p *ngIf="arrFiltrado?.length == 0" class="font-weight-bold text-center"> No se encuentran resultados </p>
-    <div id="card" class="row mt-4 mb-4 shadow-lg p-3 mb-5 bg-white rounded" *ngFor="let perro of arrFiltrado">
+
+    <div id="card" class="row mt-4 mb-4 shadow p-3 mb-5 bg-white rounded" *ngFor="let perro of arrFiltrado">
 
         <div id="card2" class="row no-gutters">
 
             <div class="col-md-4">
                 <img id="imagen" [src]="perro.foto" class="img-fluid rounded" alt="Responsive image">
             </div>
-            <div id="CARDPERRO" class="col-md-8">
+            <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><mark class="font-weight-bold text-uppercase">{{perro.nombre}}</mark>
                     </h5>
@@ -132,10 +133,10 @@
                     <p class="card-text"><mark class="font-weight-bold">TAMAÑO:</mark>{{perro.tamano}} </p>
                     <p class="card-text"><mark class="font-weight-bold">EDAD:</mark> {{perro.edad}} año/s</p>
                     <p class="card-text"><mark class="font-weight-bold">CARACTERÍSTICAS:</mark>{{perro.caracteristicas}}
-                        <p class="card-text"><mark class="font-weight-bold">CENTRO:</mark>{{perro.perrera}}
-                            <button type="button" class="btn btn-info btn-sm mb-1" data-toggle="modal"
+                        <p class="card-text"><mark class="font-weight-bold">CENTRO: </mark>{{perro.perrera}}
+                            <button id="btnMapa" type="button" class="btn btn-info btn-sm mb-1" data-toggle="modal"
                                 data-target="#exampleModalMapa" (click)="getPerreraForFk(perro.fk_perrera)">IR A
-                                MAPA</button> </p>
+                                MAPA <i id="flecha" class="fas fa-long-arrow-alt-right"></i></button> </p>
                 </div>
             </div>
         </div>
