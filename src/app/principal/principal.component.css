@@ -29,12 +29,12 @@
 
 .lead .btn{
     width: 100%;
-    background-color: rgb(73, 170, 73);
+    background-color: #EFBE3D;
     padding: 15px 0;
     border-radius: 20px;
     transition: .5s;
 }
 
 .lead .btn:hover{
-    background-color: rgb(35, 82, 35);
+    background-color: rgb(185, 147, 49);
 }

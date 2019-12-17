@@ -2,6 +2,11 @@ div #card{
     border: 2px solid lightgreen;
     margin-top: 50px;
    }
+ h3{
+    font-family: 'Montserrat', sans-serif;
+     font-size: 230%; 
+
+    }
 
 #card2{
     margin-top: 10px;

@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: rgb(73, 170, 73);">
     <a class="navbar-brand" [routerLink]="['/principal']" (click)="scroll()"><i class="fa fa-paw fa-lg"></i> <span
+=======
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #8ec443">
+    <a class="navbar-brand" [routerLink]="['/principal']"><i class="fa fa-paw fa-lg"></i> <span
+>>>>>>> 93a06d214119d78f7f8f82049311f1e8b6ef7df8
             class="logo">ADOPTA<span>DOG</span></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
+        <span class="navbar-toggler-icon "> </span>
     </button>
-    <div class="collapse navbar-collapse " style="background-color: rgb(73, 170, 73)" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse " style="background-color: #8ec443" id="navbarNavDropdown">
         <ul class="navbar-nav">
 
             <!-- BOTON MAPA RESPONSIVE -->
@@ -94,7 +99,7 @@
 
             <li *ngIf="token != ''" class="nav-item text-center d-block d-lg-none">
                 <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: rgba(255, 0, 0, 0.76);"> <i
-                        id="on" class="fas fa-sign-out-alt"></i>
+                        id="off" class="fas fa-sign-out-alt"></i>
                 </a>
             </li>
             <br>
@@ -113,7 +118,7 @@
     <!-- USER INICIO SESION SI HAY TOKEN -->
 
     <div *ngIf="token != ''" class="nav-item text-center d-none d-lg-block nx-auto mr-1">
-        <a class="nav-link" (click)="cerrarSesion()"><i id="user" class="fas fa-user-circle mt-2"></i> {{user}}
+        <a class="nav-link"><i id="user" class="fas fa-user-circle mt-2"></i> {{user}}
             {{userApellido}}
         </a>
     </div>
@@ -121,7 +126,7 @@
     <!-- BOTON ROJO SI HAY TOKEN -->
 
     <div *ngIf="token != ''" class="nav-item text-center d-none d-lg-block nx-auto">
-        <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: rgba(255, 0, 0, 0.76);"><i id="on"
+        <a id="inicio" class="nav-link" (click)="cerrarSesion()" style="color: rgba(255, 0, 0, 0.76);"><i id="off"
                 class="fas fa-sign-out-alt"></i>
         </a>
     </div>
@@ -132,7 +137,7 @@
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content" style="background-color: #68D65E" [formGroup]="login">
+        <div class="modal-content" style="background-color: #EFBE3D" [formGroup]="login">
             <button type="button" class="close text-right p-3" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -178,7 +183,7 @@
 <div class="modal fade" id="exampleModalForo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content" style="background-color: #68D65E" [formGroup]="login">
+        <div class="modal-content" style="background-color: #EFBE3D" [formGroup]="login">
             <button type="button" class="close text-right p-3" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
