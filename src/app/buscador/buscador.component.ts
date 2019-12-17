@@ -81,13 +81,25 @@ export class BuscadorComponent implements OnInit {
 
   }
 
+  scroll() {
+    setTimeout(() => {
+      window.scrollTo({
+        top: 950,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }, 1000);
+  }
+
   onSubmit() {
     this.perrosService.getFindPerro(this.buscador.value)
 
       .then(response => {
         this.arrFiltrado = response;
-        console.log(this.arrFiltrado)
+        console.log(this.arrFiltrado);
+        this.scroll();
       });
+    //this.buscador.reset();
   }
 
   getPerreraForFk(perreraId) {

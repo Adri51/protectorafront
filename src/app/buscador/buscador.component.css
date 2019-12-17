@@ -1,5 +1,6 @@
 div #card{
-    border: 3px solid lightgreen;
+    border: 2px solid lightgreen;
+    margin-top: 50px;
    }
 
 #card2{
@@ -26,3 +27,13 @@ margin-top: 20px;
     margin-bottom: 10px;
     border-radius: 10px;
 }
+
+#buscador{
+    margin-bottom: 100px;
+}
+
+#btnMapa{
+    margin-left: 20px;
+}
+
+
