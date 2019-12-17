@@ -1,28 +1,40 @@
-div #card{
-    border: 3px solid lightgreen;
-   }
 
-#card2{
-    margin-top: 10px;
+.hero {
+    background-image: url('../../assets/cabecera1.jpg');
+    /* height: 80vh; */
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom center;
+    box-sizing: border-box;
+}
+.hero h1{
+     font-family: 'Montserrat', sans-serif;
+     color: white;
+     text-align: center;
+     padding: 4% 0 0 0;
+     text-shadow: 2px 2px 5px #000;
+     font-size: 400%;
 }
 
-#icon{
-    font-size: 35px;
+.hero h1 span{
+    font-family: 'Indie Flower', cursive;
+    font-size: 150%;
+}
+.lead{
+    /* margin: 0 auto; */
+    margin: 0 auto;
+    width: 300px;
 }
 
-#imagen{
-padding: 15px;
-margin-top: 20px;
+.lead .btn{
+    width: 100%;
+    background-color: rgb(73, 170, 73);
+    padding: 15px 0;
+    border-radius: 20px;
+    transition: .5s;
 }
 
-.mapa{
-    height: 300px;
-    max-width: 100% ;
-}
-
-.modal-body #perrera{
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+.lead .btn:hover{
+    background-color: rgb(35, 82, 35);
 }

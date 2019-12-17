@@ -6,6 +6,7 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ForoComponent } from './foro/foro.component';
+import { BuscadorComponent } from './buscador/buscador.component';
 
 
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'quienessomos', component: NosotrosComponent },
   { path: 'principal', component: PrincipalComponent },
   { path: 'registro', component: RegistroComponent },
-  { path: 'foro', component: ForoComponent }
+  { path: 'foro', component: ForoComponent },
+  { path: 'buscador', component: BuscadorComponent }
 ];
 
 @NgModule({

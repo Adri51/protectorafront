@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: rgb(73, 170, 73);">
-    <a class="navbar-brand" [routerLink]="['/principal']"><i class="fa fa-paw fa-lg"></i> A D O P T A D O G</a>
+    <a class="navbar-brand" [routerLink]="['/principal']"><i class="fa fa-paw fa-lg"></i> <span
+            class="logo">ADOPTA<span>DOG</span></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon "></span>
@@ -42,28 +43,28 @@
 
             <li *ngIf="token == ''" class="nav-item text-center">
                 <a class="nav-link mt-2 d-block d-lg-none" data-toggle="modal" data-target="#exampleModalForo"
-                    [routerLinkActive]="'active'">Tablón</a>
+                    [routerLinkActive]="'active'">Foro</a>
             </li>
 
             <!-- BOTON FORO RESPONSIVE SI NO HAY TOKEN -->
 
             <li *ngIf="token != ''" class="nav-item text-center">
                 <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/foro']"
-                    [routerLinkActive]="'active'">Tablón</a>
+                    [routerLinkActive]="'active'">Foro</a>
             </li>
 
             <!-- BOTON FORO SI HAY TOKEN -->
 
             <li *ngIf="token == ''" class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalForo"
-                    [routerLinkActive]="'active'">Tablón</a>
+                    [routerLinkActive]="'active'">Foro</a>
             </li>
 
             <!-- BOTON FORO SI NO HAY TOKEN -->
 
             <li *ngIf="token != ''" class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/foro']"
-                    [routerLinkActive]="'active'">Tablón</a>
+                    [routerLinkActive]="'active'">Foro</a>
             </li>
 
             <!-- BOTON REGISTRATE RESPONSIVE SI NO HAY TOKEN -->
@@ -201,8 +202,8 @@
                         </div>
                     </div>
                     <div id="btn" class="text-center">
-                        <button (click)="onSubmit(login)" class="btn btn-outline-dark btn-block" data-dismiss="modal"
-                            [routerLink]="['/foro']">Enviar</button>
+                        <button (click)="onSubmit(login)" class="btn btn-outline-dark btn-block"
+                            data-dismiss="modal">Enviar</button>
                     </div>
                 </div>
             </div>
