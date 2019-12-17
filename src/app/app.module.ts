@@ -14,6 +14,7 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ForoComponent } from './foro/foro.component';
 import { BuscadorComponent } from './buscador/buscador.component';
+import { ErrorcomponentComponent } from './errorcomponent/errorcomponent.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { BuscadorComponent } from './buscador/buscador.component';
     RegistroComponent,
     ForoComponent,
     BuscadorComponent,
+    ErrorcomponentComponent,
 
   ],
   imports: [

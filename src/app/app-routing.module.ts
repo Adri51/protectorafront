@@ -7,6 +7,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ForoComponent } from './foro/foro.component';
 import { BuscadorComponent } from './buscador/buscador.component';
+import { ErrorcomponentComponent } from './errorcomponent/errorcomponent.component';
 
 
 
@@ -19,7 +20,9 @@ const routes: Routes = [
   { path: 'principal', component: PrincipalComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'foro', component: ForoComponent },
-  { path: 'buscador', component: BuscadorComponent }
+  { path: 'buscador', component: BuscadorComponent },
+  { path: '**', component: ErrorcomponentComponent }
+
 ];
 
 @NgModule({
