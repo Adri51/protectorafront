@@ -88,7 +88,7 @@ export class BuscadorComponent implements OnInit {
         left: 0,
         behavior: 'smooth'
       });
-    }, 1000);
+    }, 500);
   }
 
   onSubmit() {

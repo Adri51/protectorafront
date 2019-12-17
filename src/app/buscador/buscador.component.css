@@ -42,3 +42,14 @@ margin-top: 20px;
 }
 
 
+#btnVolver button{
+    
+    width: 100%;
+    background-color: #EFBE3D;
+    padding: 15px 0;
+    border-radius: 20px;
+    transition: .5s;
+
+
+}
+
