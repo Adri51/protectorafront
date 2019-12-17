@@ -33,13 +33,15 @@ export class RegistroComponent implements OnInit {
         Validators.required
       ]),
       codigo_postal: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.pattern(/^(?:0[1-9]\d{3}|[1-4]\d{4}|5[0-2]\d{3})$/)
       ]),
       direccion: new FormControl('', [
         Validators.required
       ]),
       telefono: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.pattern(/^[\d]{3}[-]*([\d]{2}[-]*){2}[\d]{2}$/)
       ]),
       localidad: new FormControl('', [
         Validators.required
@@ -66,6 +68,7 @@ export class RegistroComponent implements OnInit {
       .then(response => {
         console.log(response);
       });
+    alert('Te has registrado con exito')
 
     this.router.navigate(['/principal/']);
   }

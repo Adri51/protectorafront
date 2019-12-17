@@ -20,6 +20,17 @@ export class NosotrosComponent implements OnInit {
   }
 
   ngOnInit() {
+
+  }
+
+  onSubmit() {
+    alert('Gracias por contactar con nosotros');
+
+  }
+
+  reset() {
+
+    this.contacto.reset();
   }
 
 }
