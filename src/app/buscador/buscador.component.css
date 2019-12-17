@@ -1,0 +1,28 @@
+div #card{
+    border: 3px solid lightgreen;
+   }
+
+#card2{
+    margin-top: 10px;
+}
+
+#icon{
+    font-size: 35px;
+}
+
+#imagen{
+padding: 15px;
+margin-top: 20px;
+}
+
+.mapa{
+    height: 300px;
+    max-width: 100% ;
+}
+
+.modal-body #perrera{
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}

@@ -1,28 +1,10 @@
-div #card{
-    border: 3px solid lightgreen;
-   }
 
-#card2{
-    margin-top: 10px;
-}
-
-#icon{
-    font-size: 35px;
-}
-
-#imagen{
-padding: 15px;
-margin-top: 20px;
-}
-
-.mapa{
-    height: 300px;
-    max-width: 100% ;
-}
-
-.modal-body #perrera{
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+.hero {
+    background-image: url('../../assets/cabecera.png');
+    /* height: 80vh; */
+    height: 120vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+   
 }
