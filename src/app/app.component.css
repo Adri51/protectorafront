@@ -5,9 +5,13 @@ nav{
     font-family: 'Montserrat', sans-serif;
 }
 
-nav a .fa:hover{
+nav a .fa{
+     transition: 0.5s;
+}
+
+nav a:hover .fa{
     transform: rotatez(30deg);
-    transition: 0.5s;
+   
 }
 
 nav a #on:hover{
@@ -45,8 +49,7 @@ nav .navbar-brand {
 
 }
 div ul li{
-    margin-left: 28px;
-    display: flex;
+    margin-left: 26px;
 }
 
 #link{

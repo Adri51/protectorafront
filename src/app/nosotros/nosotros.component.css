@@ -1,6 +1,9 @@
 .container{
     margin-top: 30px;
 }
+div .col-6{
+    margin-top: 50px;
+}
 
 .container h2{
     margin-bottom: 30px;
