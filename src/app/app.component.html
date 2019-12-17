@@ -11,7 +11,8 @@
             <!-- BOTON MAPA RESPONSIVE -->
 
             <li class="nav-item text-center">
-                <a class="nav-link mt-2 p-3 d-block d-lg-none" [routerLink]="['/mapa']" [routerLinkActive]="'active'">
+                <a class="nav-link mt-2 p-3 d-block d-lg-none" [routerLink]="['/mapa']" [routerLinkActive]="'active'"
+                    (click)="scroll()">
                     Mapa</a>
             </li>
 
@@ -19,7 +20,7 @@
 
             <li class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 m-2 d-none d-lg-block" [routerLink]="['/mapa']"
-                    [routerLinkActive]="'active'">
+                    [routerLinkActive]="'active'" (click)="scroll()">
                     Mapa</a>
             </li>
 
@@ -27,7 +28,7 @@
 
             <li class="nav-item text-center">
                 <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/quienessomos']"
-                    [routerLinkActive]="'active'"> Quiénes
+                    [routerLinkActive]="'active'" (click)="scroll()"> Quiénes
                     Somos</a>
             </li>
 
@@ -35,7 +36,7 @@
 
             <li class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/quienessomos']"
-                    [routerLinkActive]="'active'"> Quiénes
+                    [routerLinkActive]="'active'" (click)="scroll()"> Quiénes
                     Somos</a>
             </li>
 
@@ -43,34 +44,35 @@
 
             <li *ngIf="token == ''" class="nav-item text-center">
                 <a class="nav-link mt-2 d-block d-lg-none" data-toggle="modal" data-target="#exampleModalForo"
-                    [routerLinkActive]="'active'">Foro</a>
+                    [routerLinkActive]="'active'" (click)="scroll()">Foro</a>
             </li>
 
             <!-- BOTON FORO RESPONSIVE SI NO HAY TOKEN -->
 
             <li *ngIf="token != ''" class="nav-item text-center">
-                <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/foro']"
-                    [routerLinkActive]="'active'">Foro</a>
+                <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/foro']" [routerLinkActive]="'active'"
+                    (click)="scroll()">Foro</a>
             </li>
 
             <!-- BOTON FORO SI HAY TOKEN -->
 
             <li *ngIf="token == ''" class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalForo"
-                    [routerLinkActive]="'active'">Foro</a>
+                    [routerLinkActive]="'active'" (click)="scroll()">Foro</a>
             </li>
 
             <!-- BOTON FORO SI NO HAY TOKEN -->
 
             <li *ngIf="token != ''" class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/foro']"
-                    [routerLinkActive]="'active'">Foro</a>
+                    [routerLinkActive]="'active'" (click)="scroll()">Foro</a>
             </li>
 
             <!-- BOTON REGISTRATE RESPONSIVE SI NO HAY TOKEN -->
 
             <li *ngIf="token == ''" class="nav-item text-center">
-                <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/registro']" [routerLinkActive]="'active'">
+                <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/registro']" [routerLinkActive]="'active'"
+                    (click)="scroll()">
                     Regístrate</a>
             </li>
 
@@ -78,7 +80,7 @@
 
             <li *ngIf="token == ''" class="nav-item text-center">
                 <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/registro']"
-                    [routerLinkActive]="'active'">
+                    [routerLinkActive]="'active'" (click)="scroll()">
                     Regístrate</a>
             </li>
 
