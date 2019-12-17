@@ -7,6 +7,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ForoComponent } from './foro/foro.component';
 import { BuscadorComponent } from './buscador/buscador.component';
+import { LoginGuard } from './login.guard';
 
 
 
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path: 'quienessomos', component: NosotrosComponent },
   { path: 'principal', component: PrincipalComponent },
   { path: 'registro', component: RegistroComponent },
-  { path: 'foro', component: ForoComponent },
+  { path: 'foro', component: ForoComponent, /* canActivate: [LoginGuard]  */ },
   { path: 'buscador', component: BuscadorComponent }
 ];
 
