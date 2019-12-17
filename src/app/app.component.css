@@ -54,6 +54,7 @@ div ul li{
 
 #link{
     margin-left: 50px;
+    float: right;
 }
 
 div ul li a{
