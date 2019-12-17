@@ -7,7 +7,11 @@ import { PrincipalComponent } from './principal/principal.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ForoComponent } from './foro/foro.component';
 import { BuscadorComponent } from './buscador/buscador.component';
+<<<<<<< HEAD
 import { LoginGuard } from './login.guard';
+=======
+import { ErrorcomponentComponent } from './errorcomponent/errorcomponent.component';
+>>>>>>> c41b72be14fd2bbf0433f7bc20a43d42e71a4fbe
 
 
 
@@ -19,8 +23,15 @@ const routes: Routes = [
   { path: 'quienessomos', component: NosotrosComponent },
   { path: 'principal', component: PrincipalComponent },
   { path: 'registro', component: RegistroComponent },
+<<<<<<< HEAD
   { path: 'foro', component: ForoComponent, /* canActivate: [LoginGuard]  */ },
   { path: 'buscador', component: BuscadorComponent }
+=======
+  { path: 'foro', component: ForoComponent },
+  { path: 'buscador', component: BuscadorComponent },
+  { path: '**', component: ErrorcomponentComponent }
+
+>>>>>>> c41b72be14fd2bbf0433f7bc20a43d42e71a4fbe
 ];
 
 @NgModule({
