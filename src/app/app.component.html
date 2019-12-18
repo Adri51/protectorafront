@@ -6,7 +6,7 @@
         <span class="navbar-toggler-icon "> </span>
     </button>
     <div class="collapse navbar-collapse " style="background-color: #8ec443" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
 
             <!-- BOTON MAPA RESPONSIVE -->
 
@@ -114,8 +114,8 @@
 
     <!-- USER INICIO SESION SI HAY TOKEN -->
 
-    <div *ngIf="token != ''" class="nav-item text-center d-none d-lg-block nx-auto mr-1">
-        <span class="nav-link"><i id="user" class="fas fa-user-circle mt-2"></i> {{user}}
+    <div *ngIf="token != ''" id="user" class="nav-item text-center d-none d-lg-block nx-auto mr-1">
+        <span class="nav-link"><i id="user_icon" class="fas fa-user-circle mt-2"></i> {{user}}
             {{userApellido}}
         </span>
     </div>

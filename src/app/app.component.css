@@ -22,6 +22,7 @@ nav a #on:hover{
 #inicio{
     color: black;
     padding: 5px;
+    margin-left: 20px;
 
 }
 
@@ -30,11 +31,20 @@ nav a #on:hover{
 }
 
 #off{
-    font-size:40px
+    font-size:40px;
+    margin-bottom:2px ;
 }
 
-#user{
-    font-size: 25px;
+nav #user{
+    margin-bottom: 5px;
+        font-size: 20px;
+
+
+}
+
+#user_icon{
+    margin-left: 20px;
+    display: inline-block;
 }
 
 nav .navbar-brand {
@@ -53,8 +63,7 @@ div ul li{
 }
 
 #link{
-    margin-left: 50px;
-    float: right;
+    margin-right: 20px;
 }
 
 div ul li a{

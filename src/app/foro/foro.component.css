@@ -2,26 +2,28 @@ div div #chat{
     height: auto;
     width: 100%;
     margin-bottom: 20px;
-    background-color: rgba(211, 211, 211, 0.5);
+    background-color: white;
     border-radius: 10px;
-    overflow-y: auto;
+    word-wrap: break-word;
 }
 
 div div .container{
     overflow-x: scroll;
     height: 600px;
-    background-color: rgb(218, 167, 40);
-    border-radius: 10px;
+    background-color: #8ec443be;
     padding: 20px;
+
 }
 div div #chat div p{
-    display: inline-block;
-    margin-top: 4px;
+     margin-top: 4px;
     margin-left: 5px;
     
 }
 div div #chat div span{
     float: right;
-    margin-top: 25px;
     margin-right: 10px;
+    margin-top: 10px;
+    word-wrap: break-word;
+
+
 }
