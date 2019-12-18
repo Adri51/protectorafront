@@ -62,7 +62,10 @@ export class AppComponent {
 
   cerrarSesion() {
     localStorage.removeItem('user-token');
+    localStorage.removeItem('nombre');
+    localStorage.removeItem('apellidos');
     this.router.navigate(['/principal/']);
     this.token = "";
+
   }
 }
