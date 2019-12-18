@@ -51,7 +51,6 @@ export class ForoComponent implements OnInit {
     this.foro.value.fecha = new Date();
     this.clientesService.insertPost(this.user, this.userApellido, this.foro.value, this.foro.value.fecha).then(response => {
       this.arrPost = response;
-      alert('Mensaje enviado')
     });
     this.foro.reset();
 
