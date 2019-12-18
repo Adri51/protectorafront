@@ -50,7 +50,7 @@
             <!-- BOTON FORO RESPONSIVE SI NO HAY TOKEN -->
 
             <li *ngIf="token != ''" class="nav-item text-center">
-                <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/foro']" [routerLinkActive]="'active'"
+                <a class="nav-link mt-2 d-block d-lg-none" [routerLink]="['/chat']" [routerLinkActive]="'active'"
                     (click)="scroll()">Chat</a>
             </li>
 
@@ -64,7 +64,7 @@
             <!-- BOTON FORO SI NO HAY TOKEN -->
 
             <li *ngIf="token != ''" class="nav-item text-center">
-                <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/foro']"
+                <a id="link" class="nav-link mt-2 d-none d-lg-block" [routerLink]="['/chat']"
                     [routerLinkActive]="'active'" (click)="scroll()">Chat</a>
             </li>
 
