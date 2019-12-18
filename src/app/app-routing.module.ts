@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'quienessomos', component: NosotrosComponent },
   { path: 'principal', component: PrincipalComponent },
   { path: 'registro', component: RegistroComponent },
-  { path: 'foro', component: ForoComponent, canActivate: [LoginGuard] },
+  { path: 'chat', component: ForoComponent, canActivate: [LoginGuard] },
   { path: 'buscador', component: BuscadorComponent },
   { path: '**', component: ErrorcomponentComponent }
 

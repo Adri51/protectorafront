@@ -25,7 +25,7 @@
             <div id="chat" *ngFor="let post of arrPost">
                 <div>
                     <p class="text-uppercase font-weight-bold">{{post.usuario}} : </p>
-                    <p class="p-2"> {{post.mensaje}}</p>
+                    <p id="mensajes" class="p-2"> {{post.mensaje}}</p>
                     <span class="text-muted">{{post.fecha | date: 'short'}}</span>
                 </div>
             </div>
