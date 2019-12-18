@@ -1,10 +1,43 @@
 <div class="container mt-5 mb-5">
-    <h2 class="text-center"><i class="fas fa-users"></i>FORO</h2>
+    <h2 class="text-center"><i class="fas fa-users"></i> CHAT</h2>
     <br>
     <div class="row">
-        <div class="col-12">
+        <div class="col-4">
+            <div class="mt-4">
+                <h3 class="text-center mb-2">ESCRIBE ALGO</h3>
+            </div>
+            <form class="shadow p-3 mb-5 bg-white rounded" [formGroup]="foro" (ngSubmit)="onSubmit()">
+                <div class="form-group text-center">
+                    <label> <strong style="color: rgba(0, 0, 0, 0.623)">{{user}} {{userApellido}}</strong> </label>
+                </div>
+
+                <div class="form-group">
+                    <label> <strong>Texto</strong> </label>
+                    <textarea class="form-control" cols="30" rows="10" formControlName="mensaje"></textarea>
+                </div>
+                <div class="">
+                    <input type="submit" value="Enviar" class="btn btn-outline-secondary btn-block">
+                </div>
+
+            </form>
+        </div>
+        <div class="container col-8">
+            <div id="chat" *ngFor="let post of arrPost">
+                <div>
+                    <p class="text-uppercase font-weight-bold">{{post.usuario}} : </p>
+                    <p class="p-2"> {{post.mensaje}}</p>
+                    <span class="text-muted">{{post.fecha}}</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- <div class="col-12">
             <div class=" card border-success shadow p-3 mb-5 bg-white rounded card w-90 mt-2 mb-3"
-                *ngFor="let post of arrPost">
+                >
                 <div class="card-body">
                     <div class="card-header text-center text-uppercase">
                         {{post.usuario}}
@@ -16,33 +49,8 @@
                     </article>
                 </div>
                 <div class="card-footer text-muted">
-                    {{post.fecha}}
+                    
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div>
-            <h3 class="text-center mb-2">ESCRIBE ALGO</h3>
-        </div>
-        <form class="shadow p-3 mb-5 bg-white rounded" [formGroup]="foro" (ngSubmit)="onSubmit()">
-            <div class="form-group text-center">
-                <label> <strong style="color: rgba(0, 0, 0, 0.623)">{{user}} {{userApellido}}</strong> </label>
-            </div>
-
-            <div class="form-group">
-                <label> <strong>Título</strong> </label>
-                <input type="text" class="form-control" formControlName="titulo">
-            </div>
-
-            <div class="form-group">
-                <label> <strong>Texto</strong> </label>
-                <textarea class="form-control" cols="30" rows="10" formControlName="mensaje"></textarea>
-            </div>
-            <div class="col-2 md-6 mt-4 mb-4 right">
-                <input type="submit" value="Enviar" class="btn btn-outline-secondary btn-block">
-            </div>
-
-        </form>
-    </div>
-</div>
+    </div> -->

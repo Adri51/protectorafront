@@ -30,3 +30,6 @@ h2{
 .text-center{
     margin-top: 20px;
 }
+div form div #box{
+     transform: scale(2);
+}
