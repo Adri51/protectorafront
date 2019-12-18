@@ -26,7 +26,7 @@
                 <div>
                     <p class="text-uppercase font-weight-bold">{{post.usuario}} : </p>
                     <p class="p-2"> {{post.mensaje}}</p>
-                    <span class="text-muted">{{post.fecha}}</span>
+                    <span class="text-muted">{{post.fecha | date: 'short'}}</span>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
                     </article>
                 </div>
                 <div class="card-footer text-muted">
-                    
+                    {{post.fecha | date: 'short'}}
                 </div>
             </div>
         </div>
